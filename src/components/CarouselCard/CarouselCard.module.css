@@ -1,0 +1,48 @@
+.price {
+    color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  }
+  
+  .carousel {
+    @mixin hover {
+      .carouselControls {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .carouselControls {
+    opacity: 1 !important;
+    size: 5rem;
+
+  }
+
+  .carouselControl {
+    background-color: var(--mantine-color-gray-7);
+    color: var(--mantine-color-gray8);
+    border-radius: var(--mantine-radius-md);
+    padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+    font-size: var(--mantine-font-size-md);
+    cursor: pointer;
+    border-style: none;
+    
+    border-color: var(--mantine-color-gray-8);
+    @mixin hover {
+      background-color: var(--mantine-color-gray-7);
+    }
+  }
+  .carouselControls :hover{
+    background-color: var(--mantine-color-gray-6);
+    color: var(--mantine-color-gray-2);
+  }
+  
+
+  
+  .carouselIndicator {
+    width: 8px;
+    height: 8px;
+    transition: width 250ms ease;
+  
+    &[data-active] {
+      width: 16px;
+    }
+  }

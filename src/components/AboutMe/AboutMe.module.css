@@ -1,0 +1,99 @@
+.wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: rem(180px);
+  padding-bottom: rem(130px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--mantine-color-dark-7);
+}
+
+.container {
+  max-width: var(--mantine-breakpoint-md);
+  margin: 0 var(--mantine-spacing-sm);
+}
+
+.content {
+  overflow: auto;
+  width: 100%;
+  max-width: var(--mantine-breakpoint-sm);
+  margin-bottom: var(--mantine-spacing-xl);
+  padding-bottom: var(--mantine-spacing-xl);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  float: left;
+  margin-right: var(--mantine-spacing-xl);
+  margin-bottom: var(--mantine-spacing-sm);
+  margin-top: 0.4rem;
+}
+
+.title {
+  font-weight: 800;
+  font-size: rem(50px);
+  margin-bottom: var(--mantine-spacing-sm);
+  
+}
+
+.subtitle {
+  font-size: var(--mantine-font-size-heading-lg);
+  color: var(--mantine-color-gray-3);
+  margin-bottom: var(--mantine-spacing-xl);
+}
+
+.description {
+  font-size: var(--mantine-font-size-md);
+  color: var(--mantine-color-gray-5);
+  margin-bottom: var(--mantine-spacing-xl);
+  line-height: 1.9;
+}
+
+.skillsSection {
+  padding-top: var(--mantine-spacing-xs);
+  margin-bottom: var(--mantine-spacing-xl);
+}
+
+.skillsTitle {
+  margin-bottom: var(--mantine-spacing-lg);
+  font-weight: 800;
+  font-size: rem(35px);
+}
+
+.skillsGrid {
+  margin-top: var(--mantine-spacing-lg);
+  gap: var(--mantine-spacing-xl);
+  padding-top: var(--mantine-spacing-lg);
+}
+
+.skillLabel {
+  color: var(--mantine-color-gray-5);
+  font-size: var(--mantine-font-size-md);
+}
+
+.controls {
+  margin-top: var(--mantine-spacing-xl);
+  gap: var(--mantine-spacing-md);
+}
+
+@media (max-width: var(--mantine-breakpoint-md)) {
+  .image {
+    max-width: 250px;
+    margin: 0 auto var(--mantine-spacing-xl);
+  }
+  
+  .title {
+    font-size: var(--mantine-font-size-heading-lg);
+  }
+  
+  .subtitle {
+    font-size: var(--mantine-font-size-md);
+  }
+  
+  .description {
+    font-size: var(--mantine-font-size-md);
+  }
+}

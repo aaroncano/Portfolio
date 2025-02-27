@@ -1,0 +1,30 @@
+.container {
+  width: 100vw;
+  background-color: var(--mantine-color-dark-8);
+  min-height: 100vh;
+  padding-top: rem(180px);
+  padding-bottom: rem(130px);
+}
+
+.contactContainer {
+  max-width: var(--mantine-breakpoint-md);
+  margin: 0 auto;
+}
+
+.contactSection {
+  padding: var(--mantine-spacing-xl);
+}
+
+.formTitle {
+  margin-bottom: var(--mantine-spacing-lg);
+}
+
+.submitButton {
+  margin-top: var(--mantine-spacing-md);
+  width: 100%;
+}
+
+.contactItem {
+  margin-bottom: var(--mantine-spacing-md);
+  align-items: center;
+}

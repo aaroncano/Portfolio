@@ -1,0 +1,110 @@
+  .wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  padding-top: rem(180px);
+  padding-bottom: rem(130px);
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: top;
+  flex-direction: column;
+
+  @media (max-width: var(--mantine-breakpoint-xs)) {
+    padding-top: rem(80px);
+    padding-bottom: rem(50px);
+  }
+  }
+
+
+.inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+  max-width: 30vw;
+}
+
+.title {
+  font-weight: 800;
+  font-size: rem(60px);
+  letter-spacing: rem(-1px);
+  color: #b41220;
+  margin-bottom: var(--mantine-spacing-xs);
+  text-align: left;
+  font-family: var(--mantine-font-family-headings);
+  width: 100%;
+  @media (max-width: var(--mantine-breakpoint-xs)) {
+    font-size: rem(28px);
+    text-align: left;
+  }
+}
+
+.subtitle {
+  font-weight: 800;
+  font-size: rem(45px);
+  letter-spacing: rem(-1px);
+  width: 100%;
+  color: #b41220;
+  margin-bottom: var(--mantine-spacing-xs);
+  text-align: left;
+  font-family: var(--mantine-font-family-headings);
+
+  @media (max-width: var(--mantine-breakpoint-xs)) {
+    font-size: rem(28px);
+    text-align: left;
+  }
+}
+
+.description {
+  color: var('--mantine-color-white');
+  text-align: left;
+  padding: 0;
+  font-size: var(--mantine-font-size-lg);
+
+  @media (max-width: var(--mantine-breakpoint-xs)) {
+    font-size: var(--mantine-font-size-md);
+    text-align: left;
+  }
+}
+
+.controls {
+  width: 100%;
+  margin-top: calc(var(--mantine-spacing-xl) * 2.5);
+  display: flex;
+  justify-content: right;
+  padding-left: var(--mantine-spacing-md);
+
+  @media (max-width: var(--mantine-breakpoint-xs)) {
+    flex-direction: column;
+  }
+}
+
+.control {
+  height: rem(42px);
+  font-size: var(--mantine-font-size-md);
+
+  &:not(:first-of-type) {
+    margin-left: var(--mantine-spacing-md);
+  }
+
+  @media (max-width: var(--mantine-breakpoint-xs)) {
+    &:not(:first-of-type) {
+      margin-top: var(--mantine-spacing-md);
+      margin-left: 0;
+    }
+  }
+}
+
+.secondaryControl {
+  color: var(--mantine-color-white);
+  background-color: rgba(255, 255, 255, 0.4);
+
+  @mixin hover {
+    background-color: rgba(255, 255, 255, 0.45);
+  }
+}

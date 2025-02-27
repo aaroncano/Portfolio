@@ -1,0 +1,55 @@
+.wrapper {
+  background-color: var(--mantine-color-dark-7);
+  min-width: 100vw;
+  min-height: 100vh;
+  padding-top: rem(180px);
+}
+
+.title {
+    font-weight: 800;
+    font-size: rem(50px);
+
+  
+    @media (max-width: --mantine-breakpoint-sm) {
+      font-size: 24px;
+    }
+  }
+  
+  .description {
+    max-width: 600px;
+    margin: auto;
+   
+    &::after {
+      content: '';
+      display: block;
+      background-color: var(--mantine-color-blue-filled);
+      width: 45px;
+      height: 2px;
+      margin-top: var(--mantine-spacing-sm);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .card {
+    border: 1px solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+    padding-top: 0;
+    padding-bottom: 10vh;
+    padding-left: 30 vw;
+    padding-right: 30 vw;
+    margin: auto auto;
+    margin-bottom: 10vh;
+    max-width: 50vw;
+    width: 100%;
+  }
+  
+  .cardTitle {
+    &::after {
+      content: '';
+      display: block;
+      background-color: var(--mantine-color-dark-8);
+      width: 45px;
+      height: 4px;
+      margin-top: var(--mantine-spacing-sm);
+    }
+  }
