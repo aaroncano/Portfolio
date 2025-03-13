@@ -1,54 +1,49 @@
 .wrapper {
   width: 100vw;
-  min-height: 100vh;
-  padding-top: rem(180px);
-  padding-bottom: rem(130px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--mantine-color-dark-7);
+  padding: var(--mantine-spacing-xs);
+  background-color: var(--mantine-color-dark-8);
 }
 
+.inner {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  width: 100%;
+
+  background-color: var(--mantine-color-dark-7);
+  max-width: var(--mantine-breakpoint-sm);
+  padding: var(--mantine-spacing-lg);
+  border-radius: var(--mantine-radius-md);
+  row-gap: var(--mantine-spacing-sm);
+}
+
+
 .container {
-  max-width: var(--mantine-breakpoint-md);
+  max-width: var(--mantine-breakpoint-lg);
   margin: 0 var(--mantine-spacing-sm);
 }
 
 .content {
   overflow: auto;
   width: 100%;
-  max-width: var(--mantine-breakpoint-sm);
-  margin-bottom: var(--mantine-spacing-xl);
-  padding-bottom: var(--mantine-spacing-xl);
+  max-width: var(--mantine-breakpoint-xs);
 }
 
-.image {
-  width: 100%;
-  height: auto;
-  max-width: 150px;
-  float: left;
-  margin-right: var(--mantine-spacing-xl);
-  margin-bottom: var(--mantine-spacing-sm);
-  margin-top: 0.4rem;
-}
 
 .title {
-  font-weight: 800;
-  font-size: rem(50px);
-  margin-bottom: var(--mantine-spacing-sm);
-  
+  font-weight: 600;
+  font-size: rem(26px);
+  color: var(--mantine-color-white);
+  margin-bottom: var(--mantine-spacing-xs);
+  text-align: left;
+  font-family: var(--mantine-font-family-headings);
 }
 
-.subtitle {
-  font-size: var(--mantine-font-size-heading-lg);
-  color: var(--mantine-color-gray-3);
-  margin-bottom: var(--mantine-spacing-xl);
-}
 
 .description {
   font-size: var(--mantine-font-size-md);
-  color: var(--mantine-color-gray-5);
-  margin-bottom: var(--mantine-spacing-xl);
+  color: var(--mantine-color-white-3);
+  max-width: 500px;
   line-height: 1.9;
 }
 
@@ -60,7 +55,8 @@
 .skillsTitle {
   margin-bottom: var(--mantine-spacing-lg);
   font-weight: 800;
-  font-size: rem(35px);
+  color: var(--mantine-color-white-0);
+  font-size: rem(40px);
 }
 
 .skillsGrid {
@@ -70,7 +66,7 @@
 }
 
 .skillLabel {
-  color: var(--mantine-color-gray-5);
+  color: var(--mantine-color-dark-2);
   font-size: var(--mantine-font-size-md);
 }
 

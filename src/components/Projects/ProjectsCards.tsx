@@ -1,8 +1,7 @@
-import { IconDeviceGamepad2, IconChartCovariate, IconBrush, IconUser, IconBrandUnity, IconBrandCSharp, IconBrandCss3, IconBrandJavascript, IconHtml, IconBrandBootstrap, IconBrandDjango, IconBrandPython, IconBrandMantine, IconBrandTypescript, IconBrandReact, IconDatabaseCog } from '@tabler/icons-react';
+import { IconBrandUnity, IconBrandCSharp, IconBrandCss3, IconBrandJavascript, IconHtml, IconBrandBootstrap, IconBrandDjango, IconBrandPython, IconBrandMantine, IconBrandTypescript, IconBrandReact, IconDatabaseCog } from '@tabler/icons-react';
 import {
   Container,
   Flex,
-  Mark,
   Title,
 } from '@mantine/core';
 import classes from './ProjectsCards.module.css';
@@ -19,7 +18,6 @@ const mockdata = [
         individual artworks and exploring collections.
       </>
     ),
-    icon: IconBrush,
     skills: [ 
       { icon: <IconBrandReact size={18} />, label: 'React' },
       
@@ -42,7 +40,6 @@ const mockdata = [
         to performing statistical analysis from CSV files.
       </>
     ),
-    icon: IconChartCovariate,
     skills: [
       { icon: <IconBrandPython size={18} />, label: 'Python' },
       
@@ -55,6 +52,7 @@ const mockdata = [
       
     ]
   },
+  
   {
     urlImages:["/src/img/aaroncamaron/camaron.png", "/src/img/aaroncamaron/camaron2.png", "/src/img/aaroncamaron/camaron3.png", "/src/img/aaroncamaron/camaron4.png" ],
     title: '@aaroncamaron',
@@ -64,7 +62,6 @@ const mockdata = [
         work as a pixel artist. Pure HTML, CSS, and JS. Single Page.
       </>
     ),
-    icon: IconUser,
     skills: [
       { icon: <IconHtml size={18} />, label: 'HTML' },
 
@@ -83,7 +80,6 @@ const mockdata = [
         video games made with Unity and C#.
       </>
     ),
-    icon: IconDeviceGamepad2,
     skills: [
       { icon: <IconBrandCSharp size={18} />, label: 'C-Sharp' },
       { icon: <IconBrandUnity size={18} />, label: 'Unity' }
@@ -95,21 +91,21 @@ const mockdata = [
 export function ProjectsCards() {
   // const theme = useMantineTheme();
   const features = mockdata.map((feature) => (
-    <CarouselCard urlImages={feature.urlImages} title={feature.title} description={feature.description} icon={<feature.icon size={30} stroke={2} />} skills={feature.skills}/>
+    <CarouselCard urlImages={feature.urlImages} title={feature.title} description={feature.description} skills={feature.skills}/>
   ));
  
   return (
     <Container className={classes.wrapper} w="100vw" mih="100vh" m="0">
-      <Container size="lg" py="xl" maw="800px" mih="100vh" mx="auto">
-      <Title order={2} className={classes.title} ta="left" mt="sm" mb="0">
-        <Mark color="red">Projects</Mark>
-      </Title>
+      <Container py="xl" px="0" mih="100vh" mx="auto" className={classes.container}>
 
+        <Title order={2} className={classes.title} ta="left" mt="xl" mb="xl">
+        Projects
+        </Title>
+        <Flex justify="center" align="center" direction="row" mt="xl" wrap="wrap" gap={40} >
+          {features}
+        </Flex>
 
-      <Flex justify="center" align="center" direction="column" mt="xl" wrap="nowrap">
-        {features}
-      </Flex>
-    </Container>
+      </Container>
     </Container>
 
   );

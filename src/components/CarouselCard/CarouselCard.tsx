@@ -4,6 +4,7 @@ import { Button, Card, Flex, Group, Image, Overlay, SimpleGrid, Text, ThemeIcon,
 import classes from './CarouselCard.module.css';
 import React from 'react';
 import { IconArrowLeft, IconArrowRight, IconBrandGithub } from '@tabler/icons-react';
+import { useMantineTheme } from '@mantine/core';
 
 interface skillItem {
   icon: React.ReactNode;
@@ -13,12 +14,14 @@ interface skillItem {
 interface CarouselCardProps {
   urlImages: string[];
   title: string;
-  icon: React.ReactNode;
   description: React.ReactNode;
   skills: skillItem[];
 }
 
-export function CarouselCard({ urlImages, title, icon, description, skills }: CarouselCardProps) {
+export function CarouselCard({ urlImages, title, description, skills }: CarouselCardProps) {
+
+  const theme = useMantineTheme();
+  
   const slides = urlImages.map((image, index) => (
     <Carousel.Slide key={index}>
       <Overlay backgroundOpacity={0.2}/>
@@ -27,7 +30,7 @@ export function CarouselCard({ urlImages, title, icon, description, skills }: Ca
   ));
 
   return (
-    <Card radius="xl" w="100%"  maw="800px" padding="xl" mt="lg" mb="5rem" shadow='xl'>
+    <Card radius="lg" maw="580px" mih="100%" shadow='xl' mt="xl" mb="xl" className={classes.card}>
       <Card.Section mb="lg">
         <Carousel
           withIndicators
@@ -47,7 +50,6 @@ export function CarouselCard({ urlImages, title, icon, description, skills }: Ca
       </Card.Section>
       
       <Flex align="center" justify="flex-start" gap="sm" direction="row" mt="lg">
-        {icon} 
         <Title order={2}>
           {title}
         </Title>
@@ -80,7 +82,7 @@ export function CarouselCard({ urlImages, title, icon, description, skills }: Ca
           </ThemeIcon>
         </Button>
 
-        <Button variant='light' miw="50%" ml="1.5rem" color="green"> Visit Project </Button>
+        <Button variant='light' sx={{ maxWidth: theme.breakpoints.lg, margin: '0 auto' }} ml="1.5rem" color="green"> Visit Project </Button>
       </Flex>
 
     </Card>
