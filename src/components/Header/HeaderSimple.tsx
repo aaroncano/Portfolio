@@ -5,7 +5,7 @@ import classes from './HeaderSimple.module.css';
 
 const links = [
   { link: '/about', label: 'Hello' },
-  { link: '/learn', label: 'About Me' },
+  { link: '/learn', label: 'About' },
   { link: '/pricing', label: 'Projects' },
   { link: '/community', label: 'Contact' },
 ];

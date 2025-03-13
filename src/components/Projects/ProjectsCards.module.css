@@ -1,8 +1,20 @@
 .wrapper {
+  width: 100vw;
+  padding: var(--mantine-spacing-xs);
   background-color: var(--mantine-color-dark-8);
-  min-width: 100vw;
-  min-height: 100vh;
-  padding-top: rem(180px);
+}
+
+.inner {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  width: 100%;
+
+  background-color: var(--mantine-color-dark-7);
+  max-width: var(--mantine-breakpoint-sm);
+  padding: var(--mantine-spacing-lg);
+  border-radius: var(--mantine-radius-md);
+  row-gap: var(--mantine-spacing-sm);
 }
 
 .container {
@@ -11,31 +23,21 @@
 }
 
 .title {
-    font-weight: 800;
-    font-size: rem(60px);
-    color: var(--mantine-color-white-0);
-    margin-bottom: var(--mantine-spacing-sm);
-    
-    @media (max-width: --mantine-breakpoint-sm) {
-      font-size: 24px;
-    }
-  }
-  
-  .description {
-    max-width: 600px;
-    margin: auto;
-   
-    &::after {
-      content: '';
-      display: block;
-      background-color: var(--mantine-color-blue-filled);
-      width: 45px;
-      height: 2px;
-      margin-top: var(--mantine-spacing-sm);
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
+  font-weight: 600;
+  font-size: rem(26px);
+  color: var(--mantine-color-white);
+  margin-bottom: var(--mantine-spacing-xs);
+  text-align: left;
+  font-family: var(--mantine-font-family-headings);
+}
+
+
+.description {
+  font-size: var(--mantine-font-size-md);
+  color: var(--mantine-color-white-3);
+  max-width: 500px;
+  line-height: 1.9;
+}
   
   .card {
     border: 1px solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));

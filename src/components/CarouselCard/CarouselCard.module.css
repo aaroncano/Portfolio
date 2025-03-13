@@ -1,52 +1,76 @@
 .card {
-  background-color: var(--mantine-color-dark-7);
+  background-color: var(--mantine-color-dark-6);
+  max-width: 100%;
 }
 
-.price {
-    color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  }
+.title {
+  font-weight: 600;
+  font-size: rem(22px);
+  color: var(--mantine-color-white-1);
+  margin-bottom: var(--mantine-spacing-xs);
+  text-align: left;
+  font-family: var(--mantine-font-family-headings);
+}
+
+.carousel{
+  width: 100%;
+  height: 100%;
   
-  .carousel {
-    @mixin hover {
-      .carouselControls {
-        opacity: 1;
-      }
+}
+
+.slide{
+  min-height: 100%;
+  height: 14rem;
+}
+
+.description {
+  color: var(--mantine-color-white-3);
+  width: 100%;
+  line-height: 1.7;
+}
+
+  
+.carousel {
+  @mixin hover {
+    .carouselControls {
+      opacity: 1;
     }
   }
+}
   
-  .carouselControls {
-    opacity: 1 !important;
-    size: 5rem;
+.carouselControls {
+  opacity: 1 !important;
+  size: 5rem;
 
-  }
+}
 
-  .carouselControl {
+.carouselControl {
+  background-color: var(--mantine-color-gray-7);
+  color: var(--mantine-color-gray8);
+  border-radius: var(--mantine-radius-md);
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+  font-size: var(--mantine-font-size-md);
+  cursor: pointer;
+  border-style: none;
+  
+  border-color: var(--mantine-color-gray-8);
+  @mixin hover {
     background-color: var(--mantine-color-gray-7);
-    color: var(--mantine-color-gray8);
-    border-radius: var(--mantine-radius-md);
-    padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
-    font-size: var(--mantine-font-size-md);
-    cursor: pointer;
-    border-style: none;
-    
-    border-color: var(--mantine-color-gray-8);
-    @mixin hover {
-      background-color: var(--mantine-color-gray-7);
-    }
   }
-  .carouselControls :hover{
-    background-color: var(--mantine-color-gray-6);
-    color: var(--mantine-color-gray-2);
-  }
-  
+}
+.carouselControls :hover{
+  background-color: var(--mantine-color-gray-6);
+  color: var(--mantine-color-gray-2);
+}
 
-  
-  .carouselIndicator {
-    width: 8px;
-    height: 8px;
-    transition: width 250ms ease;
-  
-    &[data-active] {
-      width: 16px;
-    }
+
+
+.carouselIndicator {
+  width: 8px;
+  height: 8px;
+  transition: width 250ms ease;
+
+  &[data-active] {
+    width: 16px;
   }
+}

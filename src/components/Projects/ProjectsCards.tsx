@@ -1,8 +1,9 @@
 import { IconBrandUnity, IconBrandCSharp, IconBrandCss3, IconBrandJavascript, IconHtml, IconBrandBootstrap, IconBrandDjango, IconBrandPython, IconBrandMantine, IconBrandTypescript, IconBrandReact, IconDatabaseCog } from '@tabler/icons-react';
 import {
-  Container,
-  Flex,
+  SimpleGrid,
+  Stack,
   Title,
+  Text
 } from '@mantine/core';
 import classes from './ProjectsCards.module.css';
 import { CarouselCard } from '../CarouselCard/CarouselCard';
@@ -13,21 +14,21 @@ const mockdata = [
     title: 'Art Reverie',
     description: (
       <>
-        Web app design to showcase public-domain 
-        artworks and provide information about them, with capabilities for searching 
+        <Text size="sm" fw={600} span c="white">Web app made to showcase public-domain 
+        artworks</Text> and provide information about them, with capabilities for searching 
         individual artworks and exploring collections.
       </>
     ),
     skills: [ 
-      { icon: <IconBrandReact size={18} />, label: 'React' },
+      { icon: <IconBrandReact size={20} />, label: 'React' },
       
-      { icon: <IconBrandTypescript size={18} />, label: 'TypeScript'},
+      { icon: <IconBrandTypescript size={20} />, label: 'TypeScript'},
 
-      { icon: <IconBrandDjango size={18} />, label: 'Django'},
+      { icon: <IconBrandDjango size={20} />, label: 'Django'},
 
-      { icon: <IconDatabaseCog size={18} />, label: 'Databases' },
+      { icon: <IconDatabaseCog size={20} />, label: 'SQLite' },
 
-      { icon: <IconBrandMantine size={18} />, label: 'Mantine'},
+      { icon: <IconBrandMantine size={20} />, label: 'Mantine'},
     ]
   },
   {
@@ -35,19 +36,21 @@ const mockdata = [
     title: 'Statistical Data Analysis System',
     description: (
       <>
-        Developed for educators and researchers at IPN, 
+        <Text size="sm" fw={600} span c="white">Developed for educators and researchers at IPN*</Text>, 
         this web application is designed to provide a straightforward approach 
-        to performing statistical analysis from CSV files.
+        to <Text size="sm" fw={600} span c="white">performing statistical analysis based on CSV files, from basic metrics to ML model training.</Text>
+        <br/> <br/>
+        *Instituto Politécnico Nacional UPIIZ
       </>
     ),
     skills: [
-      { icon: <IconBrandPython size={18} />, label: 'Python' },
+      { icon: <IconBrandPython size={20} />, label: 'Python' },
       
-      { icon: <IconBrandJavascript size={18} />, label: 'JavaScript' },
+      { icon: <IconBrandJavascript size={20} />, label: 'JavaScript' },
 
-      { icon: <IconBrandDjango size={18} />, label: 'Django' },
+      { icon: <IconBrandDjango size={20} />, label: 'Django' },
 
-      { icon: <IconBrandBootstrap size={18} />, label: 'Bootstrap' },
+      { icon: <IconBrandBootstrap size={20} />, label: 'Bootstrap' },
 
       
     ]
@@ -63,11 +66,11 @@ const mockdata = [
       </>
     ),
     skills: [
-      { icon: <IconHtml size={18} />, label: 'HTML' },
+      { icon: <IconHtml size={20} />, label: 'HTML' },
 
-      { icon: <IconBrandJavascript size={18} />, label: 'JavaScript' },
+      { icon: <IconBrandJavascript size={20} />, label: 'JavaScript' },
 
-      { icon: <IconBrandCss3 size={18} />, label: 'CSS' },
+      { icon: <IconBrandCss3 size={20} />, label: 'CSS' },
 
     ]
   },
@@ -81,8 +84,8 @@ const mockdata = [
       </>
     ),
     skills: [
-      { icon: <IconBrandCSharp size={18} />, label: 'C-Sharp' },
-      { icon: <IconBrandUnity size={18} />, label: 'Unity' }
+      { icon: <IconBrandCSharp size={20} />, label: 'C-Sharp' },
+      { icon: <IconBrandUnity size={20} />, label: 'Unity' }
 
     ]
   },
@@ -95,18 +98,18 @@ export function ProjectsCards() {
   ));
  
   return (
-    <Container className={classes.wrapper} w="100vw" mih="100vh" m="0">
-      <Container py="xl" px="0" mih="100vh" mx="auto" className={classes.container}>
+    <Stack className={classes.wrapper} mt="md" align='center'>
+      <Stack className={classes.inner}>
 
-        <Title order={2} className={classes.title} ta="left" mt="xl" mb="xl">
+        <Title className={classes.title}>
         Projects
         </Title>
-        <Flex justify="center" align="center" direction="row" mt="xl" wrap="wrap" gap={40} >
+        <SimpleGrid mt="md" w="100%" spacing="md" cols={{ base: 1, md: 2 }}>
           {features}
-        </Flex>
+        </SimpleGrid>
 
-      </Container>
-    </Container>
+      </Stack>
+    </Stack>
 
   );
 }
