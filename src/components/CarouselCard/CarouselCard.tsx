@@ -1,6 +1,6 @@
 import { Carousel } from '@mantine/carousel';
 import '@mantine/carousel/styles.css';
-import { Button, Card, Flex, Group, Image, Overlay, SimpleGrid, Text, Title } from '@mantine/core';
+import { Badge, Button, Card, Flex, Group, Image, Overlay, SimpleGrid, Text, Title } from '@mantine/core';
 import classes from './CarouselCard.module.css';
 import React from 'react';
 import { IconArrowLeft, IconArrowRight, IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
@@ -13,11 +13,12 @@ interface skillItem {
 interface CarouselCardProps {
   urlImages: string[];
   title: string;
+  year: string;
   description: React.ReactNode;
   skills: skillItem[];
 }
 
-export function CarouselCard({ urlImages, title, description, skills }: CarouselCardProps) {
+export function CarouselCard({ urlImages, title, year, description, skills }: CarouselCardProps) {
 
 
 
@@ -48,9 +49,14 @@ export function CarouselCard({ urlImages, title, description, skills }: Carousel
         </Carousel>
       </Card.Section>
       
-      <Title order={2} className={classes.title} mt="md" mb="xl">
-        {title}
-      </Title>
+      <Flex justify="space-between" align="flex-start" direction="row" mt="md" mb="xl" >
+        <Title className={classes.title}>
+          {title}
+        </Title> 
+        <Badge variant='dot' color='green' style={{ flexShrink: 0 }} ml="xs" mt="8px">{year}</Badge>
+
+      </Flex>
+
 
       <SimpleGrid cols={{ base: 1, xs: 2, sm: 2}} spacing="sm" mb="sm">
         {skills.map((skill, index) => (

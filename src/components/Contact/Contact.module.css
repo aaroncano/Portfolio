@@ -35,8 +35,13 @@
   line-height: 1.9;
 }
 
-.contactSection {
-  padding: var(--mantine-spacing-xl);
+.infoContainer {
+  min-width: 300px;
+}
+@media (max-width: 550px) {
+  .infoContainer {
+    min-width: 100%;
+  }
 }
 
 .formTitle {
@@ -46,9 +51,4 @@
 .submitButton {
   margin-top: var(--mantine-spacing-md);
   width: 100%;
-}
-
-.contactItem {
-  margin-bottom: var(--mantine-spacing-md);
-  align-items: center;
 }

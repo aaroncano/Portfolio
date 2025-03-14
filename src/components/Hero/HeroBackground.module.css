@@ -88,8 +88,8 @@
   }
 
   .image {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     margin-bottom: var(--mantine-spacing-sm);
     margin-right: auto;
   }

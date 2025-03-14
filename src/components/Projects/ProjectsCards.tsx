@@ -12,6 +12,7 @@ const mockdata = [
   {
     urlImages: ['/src/img/ArtReviere/reviere.png'],
     title: 'Art Reverie',
+    year: '2024 - Present',
     description: (
       <>
         <Text size="sm" fw={600} span c="white">Web app made to showcase public-domain 
@@ -32,12 +33,13 @@ const mockdata = [
     ]
   },
   {
-    urlImages: ['/src/img/SAED/SAED.png', '/src/img/SAED/SAED2.png', '/src/img/SAED/SAED3.png', '/src/img/SAED/SAED4.png', '/src/img/SAED/SAED5.png'],
+    urlImages: ['/src/img/SAED/SAED4.png', '/src/img/SAED/SAED2.png', '/src/img/SAED/SAED3.png', '/src/img/SAED/SAED.png', '/src/img/SAED/SAED5.png'],
     title: 'Statistical Data Analysis System',
+    year: '2023 - 2024',
     description: (
       <>
-        <Text size="sm" fw={600} span c="white">Developed for educators and researchers at IPN*</Text>, 
-        this web application is designed to provide a straightforward approach 
+        <Text size="sm" fw={600} span c="white">Developed for educators and researchers at IPN*</Text>. 
+        Web app designed to provide a straightforward approach 
         to <Text size="sm" fw={600} span c="white">performing statistical analysis based on CSV files, from basic metrics to ML model training.</Text>
         <br/> <br/>
         *Instituto Politécnico Nacional UPIIZ
@@ -55,14 +57,15 @@ const mockdata = [
       
     ]
   },
+
   
   {
-    urlImages:["/src/img/aaroncamaron/camaron.png", "/src/img/aaroncamaron/camaron2.png", "/src/img/aaroncamaron/camaron3.png", "/src/img/aaroncamaron/camaron4.png" ],
+    urlImages:["/src/img/aaroncamaron/camaron3.png", "/src/img/aaroncamaron/camaron2.png", "/src/img/aaroncamaron/camaron.png", "/src/img/aaroncamaron/camaron4.png" ],
     title: '@aaroncamaron',
+    year: '2024',
     description: (
       <>
-        Page to showcase my 
-        work as a pixel artist. Pure HTML, CSS, and JS. Single Page.
+        <Text size="sm" fw={600} span c="white">Single-page website</Text> to showcase my work as a pixel artist. Built with pure HTML, CSS, and JavaScript.
       </>
     ),
     skills: [
@@ -75,18 +78,38 @@ const mockdata = [
     ]
   },
   {
-    urlImages: ["/src/img/VideoGames/astron.png", "/src/img/VideoGames/astron2.png", "/src/img/VideoGames/astron3.png", "/src/img/VideoGames/octopuses.png", "/src/img/VideoGames/octopuses2.png", "/src/img/VideoGames/octopuses3.png", "/src/img/VideoGames/octopuses4.png" ],
-    title: 'Video Games',
+    urlImages:["/src/img/AOB/octopuses3.png", "/src/img/AOB/octopuses4.png", "/src/img/AOB/octopuses2.png", "/src/img/AOB/octopuses.png"],
+    title: 'Amazing Octopuses Battle',
+    year: '2021',
     description: (
       <>
-        Two of my 
-        video games made with Unity and C#.
+        <Text size="sm" fw={600} span c="white">A 2-player local multiplayer </Text>game made with C# and Unity. 
+        Inspired by classic web games. Features <Text size="sm" fw={600} span c="white">octopuses battling with unique weapons, 
+        wall-climbing/clinging mechanics and double jumps for chaotic fun</Text>. 
       </>
     ),
     skills: [
-      { icon: <IconBrandCSharp size={20} />, label: 'C-Sharp' },
-      { icon: <IconBrandUnity size={20} />, label: 'Unity' }
+      { icon: <IconBrandUnity size={20} />, label: 'Unity' },
 
+      { icon: <IconBrandCSharp size={20} />, label: 'C#' },
+
+    ]
+  },
+  {
+    urlImages:[ "/src/img/Astron/astron.png", "/src/img/Astron/astron2.png", "/src/img/Astron/astron3.png"],
+    title: 'Astron',
+    year: '2020',
+    description: (
+      <>
+        <Text size="sm" fw={600} span c="white">A 2D platformer game</Text> made with C# and Unity. 
+        Features <Text size="sm" fw={600} span c="white">a space theme, pixel art graphics, 
+        and challenging levels</Text>. 
+      </>
+    ),
+    skills: [
+      { icon: <IconBrandUnity size={20} />, label: 'Unity' },
+
+      { icon: <IconBrandCSharp size={20} />, label: 'C#' },
     ]
   },
 ];
@@ -94,7 +117,7 @@ const mockdata = [
 export function ProjectsCards() {
   // const theme = useMantineTheme();
   const features = mockdata.map((feature) => (
-    <CarouselCard urlImages={feature.urlImages} title={feature.title} description={feature.description} skills={feature.skills}/>
+    <CarouselCard urlImages={feature.urlImages} title={feature.title} year={feature.year} description={feature.description} skills={feature.skills}/>
   ));
  
   return (
