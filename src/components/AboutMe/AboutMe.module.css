@@ -24,9 +24,11 @@
 }
 
 .content {
+  margin-top: var(--mantine-spacing-md);
   overflow: auto;
   width: 100%;
   max-width: var(--mantine-breakpoint-xs);
+  
 }
 
 

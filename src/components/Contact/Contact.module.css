@@ -1,14 +1,38 @@
-.container {
+.wrapper {
   width: 100vw;
+  padding: var(--mantine-spacing-xs);
   background-color: var(--mantine-color-dark-8);
-  min-height: 100vh;
-  padding-top: rem(180px);
-  padding-bottom: rem(130px);
 }
 
-.contactContainer {
-  max-width: var(--mantine-breakpoint-md);
-  margin: 0 auto;
+
+.inner {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  width: 100%;
+
+  background-color: var(--mantine-color-dark-7);
+  max-width: var(--mantine-breakpoint-sm);
+  padding: var(--mantine-spacing-lg);
+  border-radius: var(--mantine-radius-md);
+  row-gap: var(--mantine-spacing-sm);
+}
+
+.title {
+  font-weight: 600;
+  font-size: rem(26px);
+  color: var(--mantine-color-white);
+  margin-bottom: var(--mantine-spacing-xs);
+  text-align: left;
+  font-family: var(--mantine-font-family-headings);
+}
+
+
+.description {
+  font-size: var(--mantine-font-size-md);
+  color: var(--mantine-color-white-3);
+  max-width: 500px;
+  line-height: 1.9;
 }
 
 .contactSection {
