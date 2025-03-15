@@ -41,8 +41,8 @@ export function CarouselCard({ urlImages, title, year, description, skills }: Ca
             indicator: classes.carouselIndicator,
             control: classes.carouselControl,
           }}
-          nextControlIcon={<IconArrowRight size={30}/>}
-          previousControlIcon={<IconArrowLeft size={30}/>}
+          nextControlIcon={<IconArrowRight size={24}/>}
+          previousControlIcon={<IconArrowLeft size={24}/>}
           className={classes.carousel}
         >
           {slides}
@@ -80,8 +80,8 @@ export function CarouselCard({ urlImages, title, year, description, skills }: Ca
         </Button>
 
         <Button variant='light' ml="xs" color="green"> 
-          <Text mr="xs">
-            Visit 
+          <Text mr="xs" size='xl'>
+          👁️  
           </Text>
           <IconExternalLink size={24}/>
         </Button>

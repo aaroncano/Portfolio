@@ -52,21 +52,20 @@
 }
 
 .carouselControl {
-  background-color: var(--mantine-color-gray-7);
-  color: var(--mantine-color-gray8);
+  background-color: var(--mantine-color-dark-6);
+  color: var(--mantine-color-white-0);
   border-radius: var(--mantine-radius-md);
-  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-xs);
   font-size: var(--mantine-font-size-md);
   cursor: pointer;
   border-style: none;
+  opacity: 0.8;
+  box-shadow: none;
+  border: none;
   
-  border-color: var(--mantine-color-gray-8);
-  @mixin hover {
-    background-color: var(--mantine-color-gray-7);
-  }
 }
 .carouselControls :hover{
-  background-color: var(--mantine-color-gray-6);
+  background-color: var(--mantine-color-dark-3);
   color: var(--mantine-color-gray-2);
 }
 

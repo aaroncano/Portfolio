@@ -1,12 +1,11 @@
 import {
   Title,
   Text,
-  Group,
   Flex,
   Stack,
   Button
 } from '@mantine/core';
-import { IconMail, IconBrandGithub, IconMapPin, IconCopy } from '@tabler/icons-react';
+import { IconMail, IconBrandGithub, IconMapPin, IconCopy, IconWorldPin, IconSpy } from '@tabler/icons-react';
 import classes from './Contact.module.css';
 
 export function Contact() {
@@ -31,7 +30,10 @@ export function Contact() {
                   <Text fw={500} c="white" span>Email</Text>
 
                 </Flex>
-                <Button ml="md" variant='subtle' color='green'> <Text mr="xs">Copy</Text> <IconCopy/> </Button>
+                <Button ml="md" variant='transparent' color='green' w={{base: 'auto', xs: '140px'}}> 
+                  <Text mr="xs">Copy</Text> 
+                  <IconCopy/> 
+                </Button>
               </Flex>
               <Text c="dimmed" style={{ width: '100%', paddingLeft: "2.4rem"}}>aaroncanoc1@gmail.com</Text>
 
@@ -44,7 +46,10 @@ export function Contact() {
                   <Text fw={500} c="white" span>GitHub</Text>
 
                 </Flex>
-                <Button ml="md" variant='subtle' color='green'> <Text mr="xs">Copy</Text> <IconCopy/> </Button>
+                <Button ml="md" variant='transparent' color='green' w={{base: 'auto', xs: '140px'}}> 
+                  <Text mr="xs">Stalk</Text>
+                  <IconSpy />
+                </Button>
               </Flex>
               <Text c="dimmed" style={{ width: '100%', paddingLeft: "2.4rem"}}>github.com/aaroncano</Text>
 
@@ -57,7 +62,10 @@ export function Contact() {
                   <Text fw={500} c="white" span>Location</Text>
 
                 </Flex>
-                <Button ml="md" variant='subtle' color='green'> <Text mr="xs">Copy</Text> <IconCopy/> </Button>
+                <Button ml="md" variant='transparent' color='green' w={{base: 'auto', xs: '140px'}}> 
+                  <Text mr="xs">Where?</Text>
+                  <IconWorldPin />
+                </Button>
               </Flex>
               <Text c="dimmed" style={{ width: '100%', paddingLeft: "2.4rem"}}>Tabasco, México</Text>
 

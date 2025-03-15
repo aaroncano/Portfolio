@@ -4,15 +4,22 @@ import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderSimple.module.css';
 
 const links = [
-  { link: '/about', label: 'Hello' },
-  { link: '/learn', label: 'About' },
-  { link: '/pricing', label: 'Projects' },
-  { link: '/community', label: 'Contact' },
+  { link: '#hello', label: 'Hello' },
+  { link: '#about', label: 'About' },
+  { link: '#projects', label: 'Projects' },
+  { link: '#contact', label: 'Contact' },
 ];
 
 export function HeaderSimple() {
   const [opened, { toggle }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
+
+  const scrollToSection = (hash: string) => {
+    const element = document.querySelector(hash);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const items = links.map((link) => (
     <a
@@ -23,6 +30,7 @@ export function HeaderSimple() {
       onClick={(event) => {
         event.preventDefault();
         setActive(link.link);
+        scrollToSection(link.link);
       }}
     >
       {link.label}
@@ -32,11 +40,9 @@ export function HeaderSimple() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        {/* <MantineLogo size={28} /> */}
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
-
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
     </header>

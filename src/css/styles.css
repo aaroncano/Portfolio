@@ -1,4 +1,11 @@
 html {
     width: 100vw !important;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+
 }
+  
+  section {
+    scroll-margin-top: 65px; 
+    padding-top: 0px; 
+  }
