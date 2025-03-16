@@ -32,7 +32,7 @@ export function CarouselCard({ urlImages, title, year, description, skills, gith
   ));
 
   return (
-    <Card radius="md"  className={classes.card} w="100%" h="100%">
+    <Card radius="md"  className={classes.card}>
       <Card.Section mb="sm">
         <Carousel
           withIndicators
