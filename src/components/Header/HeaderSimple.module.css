@@ -1,38 +1,62 @@
 .header {
-    height: 56px;
-    background-color: var(--mantine-color-dark-8);
-    position: fixed;
-    top: 0; 
-    left: 0; 
-    width: 100%;    
-    z-index: 1000;  
-  }
-  
-  .inner {
-    height: 56px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .link {
-    display: block;
-    line-height: 1;
-    padding: 8px 12px;
-    border-radius: var(--mantine-radius-sm);
-    text-decoration: none;
-    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
-    font-size: var(--mantine-font-size-sm);
-    font-weight: 500;
-  
-    @mixin hover {
-      background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
-    }
-  
-    [data-mantine-color-scheme] &[data-active] {
-      background-color: var(--mantine-color-dark-6);
-      color: var(--mantine-color-white-0);
-      font-weight: 500;
-    }
+  height: 56px;
+  background-color: var(--mantine-color-dark-8);
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100%;    
+  z-index: 1000;  
+}
+
+.inner {
+  height: 56px;
+  max-width: var(--mantine-breakpoint-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.link {
+  display: block;
+  line-height: 1;
+  padding: 8px 12px;
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+  font-size: var(--mantine-font-size-md);
+  font-weight: 500;
+
+  @mixin hover {
+    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
   }
 
+  &[data-active] {
+    background-color: var(--mantine-color-dark-6);
+    color: var(--mantine-color-white-0);
+    font-weight: 500;
+  }
+
+
+}
+
+
+.mobileMenu {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: 100vw;
+  color: white;
+  height: 100vh;
+  background: var(--mantine-color-dark-8);
+  padding: var(--mantine-spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--mantine-spacing-xs);
+  z-index: 999;
+  overflow-y: auto;
+  
+  @media (min-width: --mantine-breakpoint-xs) {
+    display: none;
+  }
+}

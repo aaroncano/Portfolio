@@ -83,9 +83,9 @@ const mockdata = [
     year: '2021',
     description: (
       <>
-        <Text size="sm" fw={600} span c="#cdcdcd">A 2-player local multiplayer </Text>game made with C# and Unity. 
-        Inspired by classic web games. Features <Text size="sm" fw={600} span c="#cdcdcd">octopuses battling with unique weapons, 
-        wall-climbing/clinging mechanics and double jumps for chaotic fun</Text>. 
+        <Text size="sm" fw={600} span c="#cdcdcd">2-player local video game</Text>. 
+        Inspired by Duck Game. Features <Text size="sm" fw={600} span c="#cdcdcd">octopuses battling with unique weapons, 
+        wall-climbing/clinging mechanics and double jumps for chaotic fun</Text> Best of 9 wins. 
       </>
     ),
     skills: [
@@ -101,9 +101,10 @@ const mockdata = [
     year: '2020',
     description: (
       <>
-        <Text size="sm" fw={600} span c="#cdcdcd">A 2D platformer game</Text> made with C# and Unity. 
-        Features <Text size="sm" fw={600} span c="#cdcdcd">a space theme, pixel art graphics, 
-        and challenging levels</Text>. 
+        2D video game. <Text size="sm" fw={600} span c="#cdcdcd">Fight against multiple enemy types, collect power-ups 
+        and unlock abilities. </Text> Difficulty increases with each round. Endless gameplay.
+        <br/> <br/>
+        *Mouse recommended for better experience. 
       </>
     ),
     skills: [
@@ -127,7 +128,10 @@ export function ProjectsCards() {
         <Title className={classes.title}>
         Projects
         </Title>
-        <SimpleGrid mt="md" w="100%" spacing="md" cols={{ base: 1, md: 2 }}>
+        <Text className={classes.description} mt="md" mb="xl">
+          Projects I have worked on (The Data Analysis System was a team project):
+        </Text>
+        <SimpleGrid mt="xl  " w="100%" spacing="md" cols={{ base: 1, md: 2 }}>
           {features}
         </SimpleGrid>
 

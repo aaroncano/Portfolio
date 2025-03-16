@@ -1,13 +1,11 @@
 import { Title, Text, Stack } from '@mantine/core';
 // eslint-disable-next-line no-duplicate-imports
-import { useMantineTheme } from '@mantine/core';
 import classes from './AboutMe.module.css';
 // import { IconBrandReact, IconBrandGit, IconDatabaseCog, IconBrandHtml5, IconBrandDjango, IconBrandCss3, IconBrandTypescript, IconBrandPython, 
 
 //  } from '@tabler/icons-react';
 
 export function AboutMe() {
-  const theme = useMantineTheme();
   // const skills = [
   //   { icon: <IconBrandReact size={24} />, label: 'React' },
   //   { icon: <IconBrandHtml5 size={24} />, label: 'HTML5' },
@@ -29,11 +27,13 @@ export function AboutMe() {
 
           <div className={classes.content}>
 
-            <Text className={classes.description}>
+            <Text className={classes.description} c="dimmed">
               
-            <Text size="md" fw={600} span style={{ color: theme.colors.white[0] }}>4+ years </Text> 
-            of experience building projects (starting in game dev, now specializing in web apps).
-            <Text size="md" fw={600} span style={{ color: theme.colors.white[0] }}> My preferred stack is React + Django and MySQL/SQLite</Text>.
+            <Text size="md" fw={600} span c="#cdcdcd">4+ years </Text> 
+            of experience building projects (starting in game dev, now specializing in web apps).  
+            I hold a <Text size="md" fw={600} span c="#cdcdcd">degree in Computer Systems Engineering 👨‍🎓 from Instituto Politécnico Nacional, UPIIZ</Text>.
+            <br/><br/>
+            My preferred stack is <Text size="md" fw={600} span c="#cdcdcd">React + Django and MySQL/SQLite</Text>.
             I like cool algorithms, video games, sci-fi stories and making pixel art.  
             </Text>
 

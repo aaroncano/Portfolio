@@ -1,6 +1,7 @@
 import { Button, Text, Title, Image, Flex, Stack, Tooltip} from '@mantine/core';
 import classes from './HeroBackground.module.css';
 import { IconMail, IconBrandGithub, IconFileDownload } from '@tabler/icons-react';
+import { EmailCopyButton } from '../CopyEmail';
 
 
 export function HeroBackground() {
@@ -38,6 +39,7 @@ export function HeroBackground() {
             </Button>
             <Flex gap="md" align="flex-start">
               <IconMail size={24} />
+              <EmailCopyButton />
               <IconBrandGithub size={24} />
             </Flex>
 

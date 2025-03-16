@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Burger, Container, Group } from '@mantine/core';
+import { Burger, Container, Group, Paper, Transition } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderSimple.module.css';
 
@@ -19,6 +19,7 @@ export function HeaderSimple() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    toggle();
   };
 
   const items = links.map((link) => (
@@ -43,7 +44,20 @@ export function HeaderSimple() {
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
+        
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+        
+        <Transition transition="slide-right" duration={300} mounted={opened}>
+          {(styles) => (
+            <Paper
+              className={classes.mobileMenu}
+              style={styles}
+              hiddenFrom="xs"
+            >
+              {items}
+            </Paper>
+          )}
+        </Transition>
       </Container>
     </header>
   );
