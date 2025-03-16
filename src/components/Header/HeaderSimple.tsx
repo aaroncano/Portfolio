@@ -53,6 +53,7 @@ export function HeaderSimple() {
               className={classes.mobileMenu}
               style={styles}
               hiddenFrom="xs"
+              pt="xl"
             >
               {items}
             </Paper>

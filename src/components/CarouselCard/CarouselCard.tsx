@@ -16,9 +16,11 @@ interface CarouselCardProps {
   year: string;
   description: React.ReactNode;
   skills: skillItem[];
+  githubURL: string;
+  visitURL: string;
 }
 
-export function CarouselCard({ urlImages, title, year, description, skills }: CarouselCardProps) {
+export function CarouselCard({ urlImages, title, year, description, skills, githubURL, visitURL }: CarouselCardProps) {
 
 
 
@@ -75,11 +77,20 @@ export function CarouselCard({ urlImages, title, year, description, skills }: Ca
 
 
       <Flex wrap="nowrap" align="center" justify="flex-end" direction="row" mt="auto">  
-        <Button variant="transparent" miw="10%" p="0">
-            <IconBrandGithub size={24} color='gray'/>
+        <Button size='sm' color="light" variant="transparent" p="0" m="0" miw="sm"
+                    component="a"
+                    href={githubURL}
+                    target="_blank"
+                    rel="noopener"
+                >
+                  <IconBrandGithub size={24} />
         </Button>
-
-        <Button variant='light' ml="xs" color="green"> 
+        <Button variant='light' ml="xs" color="green"
+                            component="a"
+                            href={visitURL}
+                            target="_blank"
+                            rel="noopener"
+        > 
           <Text mr="xs" size='xl'>
           👁️  
           </Text>

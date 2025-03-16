@@ -12,7 +12,7 @@ export function HomePage() {
   const theme = useMantineTheme();
   return (
     <>
-      <Flex direction="column" align="center" justify="center"  mih="100vh" style={{ backgroundColor: theme.colors.dark[8] }}> 
+      <Flex direction="column" align="center" justify="center"  mih="100vh" style={{ backgroundColor: theme.colors.dark[8] }} bg={{base: theme.colors.dark[8]}} > 
         <header>
           <HeaderSimple />
         </header>

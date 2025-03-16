@@ -2,7 +2,7 @@
   width: 100vw;
   padding: var(--mantine-spacing-xs);
   background-color: var(--mantine-color-dark-8);
-  margin-top: 65px;
+  margin-top: 55px;
 }
 
 .inner {
@@ -14,7 +14,7 @@
 
   background-color: var(--mantine-color-dark-7);
   max-width: var(--mantine-breakpoint-sm);
-  padding: var(--mantine-spacing-lg);
+  padding: var(--mantine-spacing-lg); 
   border-radius: var(--mantine-radius-md);
   row-gap: var(--mantine-spacing-sm);
 }
@@ -69,9 +69,8 @@
   .inner {
     max-width: 100%;
     flex-direction: column;
-    padding: var(--mantine-spacing-xs);
-    text-align: center;
-    margin: var(--mantine-spacing-xs);
+    padding-left: var(--mantine-spacing-xs);
+    padding-right: var(--mantine-spacing-xs);
   }
 
   .textContent {

@@ -16,10 +16,16 @@
   border-radius: var(--mantine-radius-md);
   row-gap: var(--mantine-spacing-sm);
 }
+@media (max-width: 750px) {
+  .inner {
+    max-width: 100%;
+    padding-left: var(--mantine-spacing-xs);
+    padding-right: var(--mantine-spacing-xs);
+  }
+}
 
 .container {
   max-width: var(--mantine-breakpoint-lg);
-  margin: 0 var(--mantine-spacing-sm);
 }
 
 .title {

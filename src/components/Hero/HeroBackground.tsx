@@ -1,7 +1,9 @@
 import { Button, Text, Title, Image, Flex, Stack, Tooltip} from '@mantine/core';
 import classes from './HeroBackground.module.css';
-import { IconMail, IconBrandGithub, IconFileDownload } from '@tabler/icons-react';
+import { IconBrandGithub, IconFileDownload } from '@tabler/icons-react';
 import { EmailCopyButton } from '../CopyEmail';
+import yo from '../../img/yo_provisional_1.jpg'
+import resume from '../../Files/Aaron_Cano_CV_FullStack.pdf'
 
 
 export function HeroBackground() {
@@ -10,7 +12,7 @@ export function HeroBackground() {
     <Stack align='center' className={classes.wrapper}>
       <div className={classes.inner}>
         <Image
-            src="/src/img/yo_provisional_1.jpg"
+            src={yo}
             radius="md"
             className={classes.image}
         />
@@ -33,14 +35,31 @@ export function HeroBackground() {
           </Text>
 
           <Flex align="center" justify="flex-start" gap="xl" mt="xl" w={{ base: '100%', md: 'auto' }}>
-            <Button className={classes.control} size="sm" color="green" variant="light">
-              <Text mr="xs">Resume</Text> 
+            <Button 
+              className={classes.ontrol} 
+              size="sm" 
+              color="green" 
+              variant="light"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = resume;
+                link.download = 'Aaron_Cano_Resume_FullStack.pdf';
+                link.click();
+              }}
+            >
+              <Text mr="xs">Resume</Text>
               <IconFileDownload size={24}/>
             </Button>
-            <Flex gap="md" align="flex-start">
-              <IconMail size={24} />
+            <Flex gap="md" align="center">
               <EmailCopyButton />
-              <IconBrandGithub size={24} />
+              <Button size='sm' color="light" variant="transparent" p="0" m="0" miw="sm"
+                    component="a"
+                    href="https://github.com/aaroncano"
+                    target="_blank"
+                    rel="noopener"
+              >
+                  <IconBrandGithub size={24} color='gray'/>
+              </Button>
             </Flex>
 
           </Flex>

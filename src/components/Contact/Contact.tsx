@@ -5,8 +5,9 @@ import {
   Stack,
   Button
 } from '@mantine/core';
-import { IconMail, IconBrandGithub, IconMapPin, IconCopy, IconWorldPin, IconSpy } from '@tabler/icons-react';
+import { IconMail, IconBrandGithub, IconMapPin, IconWorldPin, IconSpy } from '@tabler/icons-react';
 import classes from './Contact.module.css';
+import { EmailCopyButtonGreen } from '../CopyEmailGreen';
 
 export function Contact() {
   return (
@@ -30,10 +31,7 @@ export function Contact() {
                   <Text fw={500} c="white" span>Email</Text>
 
                 </Flex>
-                <Button ml="md" variant='transparent' color='green' w={{base: 'auto', xs: '140px'}}> 
-                  <Text mr="xs">Copy</Text> 
-                  <IconCopy/> 
-                </Button>
+                <EmailCopyButtonGreen />
               </Flex>
               <Text c="dimmed" style={{ width: '100%', paddingLeft: "2.4rem"}}>aaroncanoc1@gmail.com</Text>
 
@@ -46,7 +44,12 @@ export function Contact() {
                   <Text fw={500} c="white" span>GitHub</Text>
 
                 </Flex>
-                <Button ml="md" variant='transparent' color='green' w={{base: 'auto', xs: '140px'}}> 
+                <Button ml="md" variant='transparent' color='green' w={{base: 'auto', xs: '140px'}}
+                      component="a"
+                      href="https://github.com/aaroncano"
+                      target="_blank"
+                      rel="noopener"
+                >
                   <Text mr="xs">Stalk</Text>
                   <IconSpy />
                 </Button>
@@ -62,7 +65,13 @@ export function Contact() {
                   <Text fw={500} c="white" span>Location</Text>
 
                 </Flex>
-                <Button ml="md" variant='transparent' color='green' w={{base: 'auto', xs: '140px'}}> 
+
+                <Button ml="md" variant='transparent' color='green' w={{base: 'auto', xs: '140px'}}
+                      component="a"
+                      href="https://maps.app.goo.gl/3N19j1wnT7vRUXnp9"
+                      target="_blank"
+                      rel="noopener"
+                >
                   <Text mr="xs">Where?</Text>
                   <IconWorldPin />
                 </Button>

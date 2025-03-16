@@ -1,13 +1,13 @@
 import { createTheme } from '@mantine/core';
 
 export const theme = createTheme({
+  
   fontFamily: "'Atkinson Hyperlegible Mono', monospace",
 
   headings: {
     fontFamily: 'Rubik, sans-serif',
     fontWeight: '600',
   },
-
 
   colors: {
     dark: [
@@ -64,5 +64,8 @@ export const theme = createTheme({
       "#b00200"
     ],
   },
+  
+  
+  
   
 });

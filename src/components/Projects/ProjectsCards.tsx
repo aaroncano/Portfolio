@@ -8,9 +8,32 @@ import {
 import classes from './ProjectsCards.module.css';
 import { CarouselCard } from '../CarouselCard/CarouselCard';
 
+import reviere from '../../img/ArtReviere/reviere.png';
+
+import SAED from '../../img/SAED/SAED.png';
+import SAED1 from '../../img/SAED/SAED1.png';
+import SAED2 from '../../img/SAED/SAED2.png';
+import SAED3 from '../../img/SAED/SAED3.png';
+import SAED4 from '../../img/SAED/SAED4.png';
+import SAED5 from '../../img/SAED/SAED5.png';
+
+import camaron3 from '../../img/aaroncamaron/camaron3.png';
+import camaron2 from '../../img/aaroncamaron/camaron2.png';
+import camaron from '../../img/aaroncamaron/camaron.png';
+import camaron4 from '../../img/aaroncamaron/camaron4.png';
+
+import octopuses3 from '../../img/AOB/octopuses3.png';
+import octopuses2 from '../../img/AOB/octopuses2.png';
+import octopuses from '../../img/AOB/octopuses.png';
+import octopuses4 from '../../img/AOB/octopuses4.png';
+
+import astron from '../../img/Astron/astron.png';
+import astron2 from '../../img/Astron/astron2.png';
+import astron3 from '../../img/Astron/astron3.png';
+
 const mockdata = [
   {
-    urlImages: ['/src/img/ArtReviere/reviere.png'],
+    urlImages: [reviere],
     title: 'Art Reverie',
     year: '2024 - Present',
     description: (
@@ -30,10 +53,13 @@ const mockdata = [
       { icon: <IconDatabaseCog size={20} />, label: 'SQLite' },
 
       { icon: <IconBrandMantine size={20} />, label: 'Mantine'},
-    ]
+    ],
+    githubURL: "https://github.com/aaroncano/Art-Reverie-App",
+    visitURL: 'https://github.com/aaroncano/Art-Reverie-App'
+
   },
   {
-    urlImages: ['/src/img/SAED/SAED4.png', '/src/img/SAED/SAED2.png', '/src/img/SAED/SAED3.png', '/src/img/SAED/SAED.png', '/src/img/SAED/SAED5.png'],
+    urlImages: [SAED4, SAED, SAED1, SAED2, SAED5, SAED3],
     title: 'Statistical Data Analysis System',
     year: '2023 - 2024',
     description: (
@@ -55,12 +81,14 @@ const mockdata = [
       { icon: <IconBrandBootstrap size={20} />, label: 'Bootstrap' },
 
       
-    ]
+    ],
+    githubURL: "https://github.com/aaroncano/IPN-Sistema_analisis_estadistico_datos",
+    visitURL: 'https://github.com/aaroncano/IPN-Sistema_analisis_estadistico_datos'
   },
 
   
   {
-    urlImages:["/src/img/aaroncamaron/camaron3.png", "/src/img/aaroncamaron/camaron2.png", "/src/img/aaroncamaron/camaron.png", "/src/img/aaroncamaron/camaron4.png" ],
+    urlImages:[camaron3, camaron2, camaron, camaron4],
     title: '@aaroncamaron',
     year: '2024',
     description: (
@@ -75,10 +103,13 @@ const mockdata = [
 
       { icon: <IconBrandCss3 size={20} />, label: 'CSS' },
 
-    ]
+    ],
+    githubURL: "https://github.com/aaroncano/aaroncamaron",
+    visitURL: 'https://aaroncamaron.netlify.app/'
+
   },
   {
-    urlImages:["/src/img/AOB/octopuses3.png", "/src/img/AOB/octopuses4.png", "/src/img/AOB/octopuses2.png", "/src/img/AOB/octopuses.png"],
+    urlImages:[octopuses3, octopuses2, octopuses, octopuses4],
     title: 'Amazing Octopuses Battle',
     year: '2021',
     description: (
@@ -93,10 +124,12 @@ const mockdata = [
 
       { icon: <IconBrandCSharp size={20} />, label: 'C#' },
 
-    ]
+    ],
+    githubURL: "https://github.com/aaroncano/AmazingOctopusesBattle",
+    visitURL: 'https://github.com/aaroncano/AmazingOctopusesBattle'
   },
   {
-    urlImages:[ "/src/img/Astron/astron.png", "/src/img/Astron/astron2.png", "/src/img/Astron/astron3.png"],
+    urlImages:[astron, astron2, astron3],
     title: 'Astron',
     year: '2020',
     description: (
@@ -111,14 +144,16 @@ const mockdata = [
       { icon: <IconBrandUnity size={20} />, label: 'Unity' },
 
       { icon: <IconBrandCSharp size={20} />, label: 'C#' },
-    ]
+    ],
+    githubURL: "https://github.com/aaroncano/Astron",
+    visitURL: 'https://aaroncanoc.itch.io/astron'
   },
 ];
 
 export function ProjectsCards() {
   // const theme = useMantineTheme();
   const features = mockdata.map((feature) => (
-    <CarouselCard urlImages={feature.urlImages} title={feature.title} year={feature.year} description={feature.description} skills={feature.skills}/>
+    <CarouselCard urlImages={feature.urlImages} title={feature.title} year={feature.year} description={feature.description} skills={feature.skills} githubURL={feature.githubURL} visitURL={feature.visitURL}/>
   ));
  
   return (
