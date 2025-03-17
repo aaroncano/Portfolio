@@ -126,7 +126,7 @@ const mockdata = [
 
     ],
     githubURL: "https://github.com/aaroncano/AmazingOctopusesBattle",
-    visitURL: 'https://github.com/aaroncano/AmazingOctopusesBattle'
+    visitURL: 'https://aaroncanoc.itch.io/amazing-octopuses-battle'
   },
   {
     urlImages:[astron, astron2, astron3],
