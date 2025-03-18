@@ -3,7 +3,7 @@ import '@mantine/carousel/styles.css';
 import { Badge, Button, Card, Flex, Group, Image, Overlay, SimpleGrid, Text, Title } from '@mantine/core';
 import classes from './CarouselCard.module.css';
 import React from 'react';
-import { IconArrowLeft, IconArrowRight, IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
+import { IconArrowLeft, IconArrowRight, IconBrandGithub, IconExternalLink, IconExternalLinkOff } from '@tabler/icons-react';
 
 interface skillItem {
   icon: React.ReactNode;
@@ -18,9 +18,10 @@ interface CarouselCardProps {
   skills: skillItem[];
   githubURL: string;
   visitURL: string;
+  available: boolean | true;
 }
 
-export function CarouselCard({ urlImages, title, year, description, skills, githubURL, visitURL }: CarouselCardProps) {
+export function CarouselCard({ urlImages, title, year, description, skills, githubURL, visitURL, available }: CarouselCardProps) {
 
 
 
@@ -85,17 +86,32 @@ export function CarouselCard({ urlImages, title, year, description, skills, gith
                 >
                   <IconBrandGithub size={24} />
         </Button>
-        <Button variant='light' ml="xs" color="green"
-                            component="a"
-                            href={visitURL}
-                            target="_blank"
-                            rel="noopener"
-        > 
-          <Text mr="xs" size='xl'>
-          👁️  
-          </Text>
-          <IconExternalLink size={24}/>
-        </Button>
+
+        {available ? (
+            <Button variant='light' ml="xs" color="green"
+            component="a"
+            href={visitURL}
+            target="_blank"
+            rel="noopener"
+              > 
+              <Text mr="xs" size='xl'>
+              👁️  
+              </Text>
+              <IconExternalLink size={24}/>
+            </Button>
+        ) : (
+          <Button variant='light' ml="xs" color="gray"
+            > 
+            <Text mr="xs" size='xl'>
+            🛠️   
+            </Text>
+            <IconExternalLinkOff size={24}/>
+          </Button>
+
+        )
+
+        }
+
       </Flex>
 
     </Card>

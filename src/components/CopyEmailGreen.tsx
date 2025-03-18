@@ -27,7 +27,7 @@ export function EmailCopyButtonGreen() {
         arrowOffset={26} arrowSize={10} withArrow
       >
         <Button ml="md" variant='transparent' color='green' w={{base: 'auto', xs: '140px'}}
-          onClick={() => clipboard.copy('aaroncanoc1@gmail.com')}
+          onClick={() => clipboard.copy('me@aaroncano.com')}
         > 
             <Text mr="xs">Copy</Text> 
               {clipboard.copied ? (

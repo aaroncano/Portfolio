@@ -3,7 +3,7 @@ import classes from './HeroBackground.module.css';
 import { IconBrandGithub, IconFileDownload } from '@tabler/icons-react';
 import { EmailCopyButton } from '../CopyEmail';
 import yo from '../../img/yo_provisional_1.jpg'
-import resume from '../../Files/Aaron_Cano_CV_FullStack.pdf'
+import resume from '../../Files/Aaron_Cano_Resume.pdf'
 
 
 export function HeroBackground() {
@@ -43,7 +43,7 @@ export function HeroBackground() {
               onClick={() => {
                 const link = document.createElement('a');
                 link.href = resume;
-                link.download = 'Aaron_Cano_Resume_FullStack.pdf';
+                link.download = 'Aaron_Cano_Resume.pdf';
                 link.click();
               }}
             >

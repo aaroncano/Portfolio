@@ -55,7 +55,8 @@ const mockdata = [
       { icon: <IconBrandMantine size={20} />, label: 'Mantine'},
     ],
     githubURL: "https://github.com/aaroncano/Art-Reverie-App",
-    visitURL: 'https://github.com/aaroncano/Art-Reverie-App'
+    visitURL: 'https://github.com/aaroncano/Art-Reverie-App',
+    available: false
 
   },
   {
@@ -83,7 +84,9 @@ const mockdata = [
       
     ],
     githubURL: "https://github.com/aaroncano/IPN-Sistema_analisis_estadistico_datos",
-    visitURL: 'https://github.com/aaroncano/IPN-Sistema_analisis_estadistico_datos'
+    visitURL: 'https://github.com/aaroncano/IPN-Sistema_analisis_estadistico_datos',
+    available: false
+    
   },
 
   
@@ -105,7 +108,8 @@ const mockdata = [
 
     ],
     githubURL: "https://github.com/aaroncano/aaroncamaron",
-    visitURL: 'https://aaroncamaron.netlify.app/'
+    visitURL: 'https://aaroncamaron.netlify.app/',
+    available: true
 
   },
   {
@@ -126,7 +130,9 @@ const mockdata = [
 
     ],
     githubURL: "https://github.com/aaroncano/AmazingOctopusesBattle",
-    visitURL: 'https://aaroncanoc.itch.io/amazing-octopuses-battle'
+    visitURL: 'https://aaroncanoc.itch.io/amazing-octopuses-battle',
+    available: true
+
   },
   {
     urlImages:[astron, astron2, astron3],
@@ -146,14 +152,16 @@ const mockdata = [
       { icon: <IconBrandCSharp size={20} />, label: 'C#' },
     ],
     githubURL: "https://github.com/aaroncano/Astron",
-    visitURL: 'https://aaroncanoc.itch.io/astron'
+    visitURL: 'https://aaroncanoc.itch.io/astron',
+    available: true
+
   },
 ];
 
 export function ProjectsCards() {
   // const theme = useMantineTheme();
   const features = mockdata.map((feature) => (
-    <CarouselCard urlImages={feature.urlImages} title={feature.title} year={feature.year} description={feature.description} skills={feature.skills} githubURL={feature.githubURL} visitURL={feature.visitURL}/>
+    <CarouselCard urlImages={feature.urlImages} title={feature.title} year={feature.year} description={feature.description} skills={feature.skills} githubURL={feature.githubURL} visitURL={feature.visitURL} available={feature.available}/>
   ));
  
   return (

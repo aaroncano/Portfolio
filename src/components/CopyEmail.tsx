@@ -27,7 +27,7 @@ export function EmailCopyButton() {
         arrowOffset={26} arrowSize={10} withArrow
       >
         <ActionIcon
-          onClick={() => clipboard.copy('aaroncanoc1@gmail.com')}
+          onClick={() => clipboard.copy('me@aaroncano.com')}
           variant="transparent"
           size="md"
           color='gray'
