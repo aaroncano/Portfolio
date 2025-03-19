@@ -8,18 +8,23 @@ import {
 import classes from './ProjectsCards.module.css';
 import { CarouselCard } from '../CarouselCard/CarouselCard';
 
-import reviere from '../../img/ArtReviere/reviere.png';
+import reviere from '../../img/ArtReviere/reviere.jpg';
+import reviere2 from '../../img/ArtReviere/reviere2.jpg';
+import reviere3 from '../../img/ArtReviere/reviere3.jpg';
+import reviere4 from '../../img/ArtReviere/reviere4.jpg';
 
-import SAED from '../../img/SAED/SAED.png';
+
+
+import SAED from '../../img/SAED/SAED4.png';
 import SAED1 from '../../img/SAED/SAED1.png';
 import SAED2 from '../../img/SAED/SAED2.png';
 import SAED3 from '../../img/SAED/SAED3.png';
-import SAED4 from '../../img/SAED/SAED4.png';
+import SAED4 from '../../img/SAED/SAED.png';
 import SAED5 from '../../img/SAED/SAED5.png';
 
 import camaron3 from '../../img/aaroncamaron/camaron3.png';
 import camaron2 from '../../img/aaroncamaron/camaron2.png';
-import camaron from '../../img/aaroncamaron/camaron.png';
+import camaron from '../../img/aaroncamaron/camaron.jpg';
 import camaron4 from '../../img/aaroncamaron/camaron4.png';
 
 import octopuses3 from '../../img/AOB/octopuses3.png';
@@ -33,7 +38,7 @@ import astron3 from '../../img/Astron/astron3.png';
 
 const mockdata = [
   {
-    urlImages: [reviere],
+    urlImages: [reviere4, reviere2, reviere, reviere3],
     title: 'Art Reverie',
     year: '2024 - Present',
     description: (
