@@ -24,7 +24,7 @@ export function HeroBackground() {
           <Text component="span" className={classes.subtitle}>
             Full Stack Developer             
           </Text>
-          <Tooltip label="Tab,🐊México🌮" color='gray' offset={{ mainAxis: 14, crossAxis: 16 }} events={{ hover: true, focus: true, touch: true }} position="top-end" transitionProps={{ transition: 'pop-bottom-right', duration: 200 }} arrowOffset={26} arrowSize={10} withArrow>
+          <Tooltip label="Tab🐊, México🌮" color='gray' offset={{ mainAxis: 14, crossAxis: 16 }} events={{ hover: true, focus: true, touch: true }} position="top-end" transitionProps={{ transition: 'pop-bottom-right', duration: 200 }} arrowOffset={26} arrowSize={10} withArrow>
             <Button size='xs' ml="sm" color="gray" variant="light">
               <Text fz='1.4rem'>🇲🇽</Text>
             </Button>
