@@ -1,12 +1,16 @@
-import { Button, Text, Title, Image, Flex, Stack, Tooltip} from '@mantine/core';
-import classes from './HeroBackground.module.css';
-import { IconBrandGithub, IconFileDownload } from '@tabler/icons-react';
-import { EmailCopyButton } from '../CopyEmail';
-import yo from '../../img/yo_provisional_1.jpg'
-import resume from '../../Files/Aaron_Cano_Resume.pdf'
+import { Button, Text, Title, Image, Flex, Stack, Tooltip, Menu } from '@mantine/core';
 
+import { useTranslation } from 'react-i18next';
+
+import classes from './HeroBackground.module.css';
+import { IconBrandGithub, IconCaretDown, IconFileDownload } from '@tabler/icons-react';
+import { EmailCopyButton } from '../CopyEmail';
+import yo from '../../img/yo_provisional_1.jpg';
+import resumeEN from '../../Files/Aaron_Cano_Resume_EN.pdf';
+import resumeES from '../../Files/Aaron_Cano_Resume_ES.pdf';
 
 export function HeroBackground() {
+  const { t } = useTranslation();
 
   return (
     <Stack align='center' className={classes.wrapper}>
@@ -15,41 +19,77 @@ export function HeroBackground() {
             src={yo}
             radius="md"
             className={classes.image}
+            alt='Profile picture'
         />
         <div className={classes.textContent}>
           <Text component="span" className={classes.pretitle}>
-            Hi, I'm
+            {t('hero.greetingPrefix')}
           </Text>
+
           <Title className={classes.title}>Aarón Cano</Title>
-          <Text component="span" className={classes.subtitle}>
-            Full Stack Developer             
+
+          <Text component="span" className={classes.subtitle} mr="sm">
+            {t('hero.jobTitle')}
           </Text>
-          <Tooltip label="Tab🐊, México🌮" color='gray' offset={{ mainAxis: 14, crossAxis: 16 }} events={{ hover: true, focus: true, touch: true }} position="top-end" transitionProps={{ transition: 'pop-bottom-right', duration: 200 }} arrowOffset={26} arrowSize={10} withArrow>
-            <Button size='xs' ml="sm" color="gray" variant="light">
+
+          <Tooltip
+            label={t('hero.locationTooltip')}
+            color='gray' offset={{ mainAxis: 14, crossAxis: 16 }} events={{ hover: true, focus: true, touch: true }} position="top-end" transitionProps={{ transition: 'pop-bottom-right', duration: 200 }}
+          >
+            <Button size='xs' color="gray" variant="light">
               <Text fz='1.4rem'>🇲🇽</Text>
             </Button>
           </Tooltip>
 
           <Text size="lg" className={classes.description}>
-            24 y/o | Full-stack dev + pixel artist + a lot of caffeine.  
+            {t('hero.bio')}
           </Text>
 
-          <Flex align="center" justify="flex-start" gap="xl" mt="xl" w={{ base: '100%', md: 'auto' }}>
-            <Button 
-              className={classes.ontrol} 
-              size="sm" 
-              color="green" 
-              variant="light"
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = resume;
-                link.download = 'Aaron_Cano_Resume.pdf';
-                link.click();
-              }}
-            >
-              <Text mr="xs">Resume</Text>
-              <IconFileDownload size={24}/>
-            </Button>
+          <Flex align="center" justify="flex-start" gap="md" mt="xl" w={{ base: '100%', md: 'auto' }}>
+            <Menu trigger="click-hover" openDelay={50} closeDelay={400} position='bottom-end' transitionProps={{ transition: 'fade-down', duration: 200 }}>
+              <Menu.Target>
+                <Button
+                  color="green"
+                  variant="light"
+                >
+                  <Text mr="xs">{t('hero.resumeButton')}</Text>
+                  <IconCaretDown size={24}/>
+                </Button>
+              </Menu.Target>
+
+              <Menu.Dropdown bg="gray">
+                <Menu.Item
+                  color='white'
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = resumeEN;
+                    link.download = 'Aaron_Cano_Resume.pdf';
+                    link.click();
+                  }}
+                >
+                  <Flex align="center" justify="flex-start">
+                    <Text span mr="xs">{t('common.english')}</Text>
+                    <IconFileDownload size={24}/>
+                  </Flex>
+                </Menu.Item>
+
+                <Menu.Item
+                  color='white'
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = resumeES;
+                    link.download = 'Aaron_Cano_CV.pdf';
+                    link.click();
+                  }}
+                >
+                  <Flex align="center" justify="flex-start">
+                    <Text span mr="xs">{t('common.spanish')}</Text>
+                    <IconFileDownload size={24}/>
+                  </Flex>
+                </Menu.Item>
+              </Menu.Dropdown>
+            </Menu>
+
             <Flex gap="md" align="center">
               <EmailCopyButton />
               <Button size='sm' color="light" variant="transparent" p="0" m="0" miw="sm"
@@ -61,13 +101,8 @@ export function HeroBackground() {
                   <IconBrandGithub size={24} color='gray'/>
               </Button>
             </Flex>
-
           </Flex>
-
-
         </div>
-
-
       </div>
     </Stack>
   );

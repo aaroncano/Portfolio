@@ -36,155 +36,136 @@ import astron from '../../img/Astron/astron.png';
 import astron2 from '../../img/Astron/astron2.png';
 import astron3 from '../../img/Astron/astron3.png';
 
+
+import { useTranslation, Trans } from 'react-i18next';
+
 const mockdata = [
   {
     urlImages: [reviere4, reviere2, reviere, reviere3],
-    title: 'Art Reverie',
-    year: '2024 - Present',
-    description: (
-      <>
-        <Text size="sm" fw={600} span c="#cdcdcd">Web app made to showcase public-domain 
-        artworks</Text> and provide information about them, with capabilities for searching 
-        individual artworks and exploring collections.
-      </>
-    ),
-    skills: [ 
+    titleKey: 'projects.art_reverie.title',
+    yearKey: 'projects.art_reverie.year',
+    descriptionKey: 'projects.art_reverie.description',
+    skills: [
       { icon: <IconBrandReact size={20} />, label: 'React' },
-      
-      { icon: <IconBrandTypescript size={20} />, label: 'TypeScript'},
-
-      { icon: <IconBrandDjango size={20} />, label: 'Django'},
-
-      { icon: <IconDatabaseCog size={20} />, label: 'SQLite' },
-
-      { icon: <IconBrandMantine size={20} />, label: 'Mantine'},
+      { icon: <IconBrandTypescript size={20} />, label: 'TypeScript' },
+      { icon: <IconBrandDjango size={20} />, label: 'Django' },
+      { icon: <IconDatabaseCog size={20} />, label: 'MySQL' },
+      { icon: <IconBrandMantine size={20} />, label: 'Mantine' },
     ],
     githubURL: "https://github.com/aaroncano/Art-Reverie-App",
     visitURL: 'https://github.com/aaroncano/Art-Reverie-App',
     available: false
-
   },
   {
     urlImages: [SAED4, SAED, SAED1, SAED2, SAED5, SAED3],
-    title: 'Statistical Data Analysis System',
-    year: '2023 - 2024',
-    description: (
-      <>
-        <Text size="sm" fw={600} span c="#cdcdcd">Developed for educators and researchers at IPN*</Text>. 
-        Web app designed to provide a straightforward approach 
-        to <Text size="sm" fw={600} span c="#cdcdcd">performing statistical analysis based on CSV files, from basic metrics to ML model training.</Text>
-        <br/> <br/>
-        *Instituto Politécnico Nacional UPIIZ
-      </>
-    ),
+    titleKey: 'projects.saed.title',
+    yearKey: 'projects.saed.year',
+    descriptionKey: 'projects.saed.description',
     skills: [
       { icon: <IconBrandPython size={20} />, label: 'Python' },
-      
       { icon: <IconBrandJavascript size={20} />, label: 'JavaScript' },
-
       { icon: <IconBrandDjango size={20} />, label: 'Django' },
-
       { icon: <IconBrandBootstrap size={20} />, label: 'Bootstrap' },
-
-      
     ],
     githubURL: "https://github.com/aaroncano/IPN-Sistema_analisis_estadistico_datos",
     visitURL: 'https://github.com/aaroncano/IPN-Sistema_analisis_estadistico_datos',
     available: false
-    
   },
-
-  
   {
-    urlImages:[camaron3, camaron2, camaron, camaron4],
-    title: '@aaroncamaron',
-    year: '2024',
-    description: (
-      <>
-        <Text size="sm" fw={600} span c="#cdcdcd">Single-page website</Text> to showcase my work as a pixel artist. Built with pure HTML, CSS, and JavaScript.
-      </>
-    ),
+    urlImages: [camaron3, camaron2, camaron, camaron4],
+    titleKey: 'projects.aaroncamaron.title',
+    yearKey: 'projects.aaroncamaron.year',
+    descriptionKey: 'projects.aaroncamaron.description',
     skills: [
       { icon: <IconHtml size={20} />, label: 'HTML' },
-
       { icon: <IconBrandJavascript size={20} />, label: 'JavaScript' },
-
       { icon: <IconBrandCss3 size={20} />, label: 'CSS' },
-
     ],
     githubURL: "https://github.com/aaroncano/aaroncamaron",
     visitURL: 'https://aaroncamaron.netlify.app/',
     available: true
-
   },
   {
-    urlImages:[octopuses3, octopuses2, octopuses, octopuses4],
-    title: 'Amazing Octopuses Battle',
-    year: '2021',
-    description: (
-      <>
-        <Text size="sm" fw={600} span c="#cdcdcd">2-player local video game</Text>. 
-        Inspired by Duck Game. Features <Text size="sm" fw={600} span c="#cdcdcd">octopuses battling with unique weapons, 
-        wall-climbing/clinging mechanics and double jumps for chaotic fun</Text> Best of 9 wins. 
-      </>
-    ),
+    urlImages: [octopuses3, octopuses2, octopuses, octopuses4],
+    titleKey: 'projects.octopuses.title',
+    yearKey: 'projects.octopuses.year',
+    descriptionKey: 'projects.octopuses.description',
     skills: [
       { icon: <IconBrandUnity size={20} />, label: 'Unity' },
-
       { icon: <IconBrandCSharp size={20} />, label: 'C#' },
-
     ],
     githubURL: "https://github.com/aaroncano/AmazingOctopusesBattle",
     visitURL: 'https://aaroncanoc.itch.io/amazing-octopuses-battle',
     available: true
-
   },
   {
-    urlImages:[astron, astron2, astron3],
-    title: 'Astron',
-    year: '2020',
-    description: (
-      <>
-        2D video game. <Text size="sm" fw={600} span c="#cdcdcd">Fight against multiple enemy types, collect power-ups 
-        and unlock abilities. </Text> Difficulty increases with each round. Endless gameplay.
-        <br/> <br/>
-        *Mouse recommended for better experience. 
-      </>
-    ),
+    urlImages: [astron, astron2, astron3],
+    titleKey: 'projects.astron.title',
+    yearKey: 'projects.astron.year',
+    descriptionKey: 'projects.astron.description',
     skills: [
       { icon: <IconBrandUnity size={20} />, label: 'Unity' },
-
       { icon: <IconBrandCSharp size={20} />, label: 'C#' },
     ],
     githubURL: "https://github.com/aaroncano/Astron",
     visitURL: 'https://aaroncanoc.itch.io/astron',
     available: true
-
   },
 ];
 
 export function ProjectsCards() {
-  // const theme = useMantineTheme();
-  const features = mockdata.map((feature) => (
-    <CarouselCard urlImages={feature.urlImages} title={feature.title} year={feature.year} description={feature.description} skills={feature.skills} githubURL={feature.githubURL} visitURL={feature.visitURL} available={feature.available}/>
-  ));
- 
+  const { t } = useTranslation('translation');
+
+  const features = mockdata.map((feature, index) => {
+
+    const translatedTitle = t(feature.titleKey);
+    const translatedYear = t(feature.yearKey);
+
+    const translatedDescription = (
+      <Trans
+        t={t} 
+        i18nKey={feature.descriptionKey}
+        components={{ 
+          highlight: <Text size="sm" fw={600} span c="#cdcdcd" />,
+          highlight1: <Text size="sm" fw={600} span c="#cdcdcd" />,
+          highlight2: <Text size="sm" fw={600} span c="#cdcdcd" />,
+          br: <br />,
+        }}
+      />
+    );
+
+
+    return (
+      <CarouselCard
+        key={index}
+        urlImages={feature.urlImages}
+        title={translatedTitle}
+        year={translatedYear}
+        description={translatedDescription}
+        skills={feature.skills}
+        githubURL={feature.githubURL}
+        visitURL={feature.visitURL}
+        available={feature.available}
+      />
+    );
+  });
+
   return (
     <Stack className={classes.wrapper} mt="md" align='center'>
       <Stack className={classes.inner}>
 
         <Title className={classes.title}>
-        Projects
+          {t('projects.title')}
         </Title>
         <Text className={classes.description} mt="md" mb="xl">
-          Projects I have worked on (The Data Analysis System was a team project):
+          {t('projects.intro_text')}
         </Text>
-        <SimpleGrid mt="xl  " w="100%" spacing="md" cols={{ base: 1, md: 2 }}>
+
+        <SimpleGrid mt="xl" w="100%" spacing="md" cols={{ base: 1, md: 2 }}>
           {features}
         </SimpleGrid>
 
       </Stack>
     </Stack>
-
   );
 }

@@ -8,81 +8,71 @@ import {
 import { IconMail, IconBrandGithub, IconMapPin, IconWorldPin, IconSpy } from '@tabler/icons-react';
 import classes from './Contact.module.css';
 import { EmailCopyButtonGreen } from '../CopyEmailGreen';
+import { useTranslation } from 'react-i18next';
 
 export function Contact() {
+  const { t } = useTranslation('translation');
+
   return (
     <Stack className={classes.wrapper} align='center' mt="md" mb="md">
       <div className={classes.inner}>
-          <Title className={classes.title}>Contact</Title>
+        <Title className={classes.title}>{t('contact.title')}</Title>
 
-          
+        <Flex direction="column" gap="xl" mt="md">
+          <Text className={classes.description}>
+            {t('contact.intro_text')}
+          </Text>
 
-
-          <Flex direction="column" gap="xl" mt="md">
-            <Text className={classes.description}>
-              Let’s talk! I’m just one message away. 
-            </Text>
-
-
-            <Flex  mb="md" align="center" justify="flex-start" gap="xs" wrap="wrap">
-              <Flex align="center" justify="space-between" gap="md" wrap="wrap" w="100%" maw="500px">
-                <Flex align="center" gap="sm">
-                  <IconMail size={24} color='white'/>
-                  <Text fw={500} c="white" span>Email</Text>
-
-                </Flex>
-                <EmailCopyButtonGreen />
+          <Flex mb="md" align="center" justify="flex-start" gap="xs" wrap="wrap">
+            <Flex align="center" justify="space-between" gap="md" wrap="wrap" w="100%" maw="500px">
+              <Flex align="center" gap="sm">
+                <IconMail size={24} color='white'/>
+                <Text fw={500} c="white" span>{t('contact.email.label')}</Text>
               </Flex>
-              <Text c="dimmed" style={{ width: '100%', paddingLeft: "2.4rem"}}>aaroncanoc1@gmail.com</Text>
-
+              <EmailCopyButtonGreen />
             </Flex>
-
-            <Flex  mb="md" align="center" justify="flex-start" gap="xs" wrap="wrap">
-              <Flex align="center" justify="space-between" gap="md" wrap="wrap" w="100%" maw="500px">
-                <Flex align="center" gap="sm">
-                  <IconBrandGithub size={24} color='white'/>
-                  <Text fw={500} c="white" span>GitHub</Text>
-
-                </Flex>
-                <Button ml="md" variant='transparent' color='green' w={{base: 'auto', xs: '140px'}}
-                      component="a"
-                      href="https://github.com/aaroncano"
-                      target="_blank"
-                      rel="noopener"
-                >
-                  <Text mr="xs">Stalk</Text>
-                  <IconSpy />
-                </Button>
-              </Flex>
-              <Text c="dimmed" style={{ width: '100%', paddingLeft: "2.4rem"}}>github.com/aaroncano</Text>
-
-            </Flex>
-
-            <Flex  mb="md" align="center" justify="flex-start" gap="xs" wrap="wrap">
-              <Flex align="center" justify="space-between" gap="md" wrap="wrap" w="100%" maw="500px">
-                <Flex align="center" gap="sm">
-                  <IconMapPin size={24} color='white'/>
-                  <Text fw={500} c="white" span>Location</Text>
-
-                </Flex>
-
-                <Button ml="md" variant='transparent' color='green' w={{base: 'auto', xs: '140px'}}
-                      component="a"
-                      href="https://maps.app.goo.gl/3N19j1wnT7vRUXnp9"
-                      target="_blank"
-                      rel="noopener"
-                >
-                  <Text mr="xs">Where?</Text>
-                  <IconWorldPin />
-                </Button>
-              </Flex>
-              <Text c="dimmed" style={{ width: '100%', paddingLeft: "2.4rem"}}>Tabasco, México</Text>
-
-            </Flex>
-
-
+            <Text c="dimmed" style={{ width: '100%', paddingLeft: "2.4rem"}}>me@aaroncano.com</Text>
           </Flex>
 
+          <Flex mb="md" align="center" justify="flex-start" gap="xs" wrap="wrap">
+            <Flex align="center" justify="space-between" gap="md" wrap="wrap" w="100%" maw="500px">
+              <Flex align="center" gap="sm">
+                <IconBrandGithub size={24} color='white'/>
+                <Text fw={500} c="white" span>{t('contact.github.label')}</Text>
+              </Flex>
+              <Button ml="md" variant='transparent' color='green' w={{base: 'auto', xs: '140px'}}
+                component="a"
+                href="https://github.com/aaroncano"
+                target="_blank"
+                rel="noopener"
+              >
+                <Text mr="xs">{t('contact.github.button')}</Text>
+                <IconSpy />
+              </Button>
+            </Flex>
+            <Text c="dimmed" style={{ width: '100%', paddingLeft: "2.4rem"}}>github.com/aaroncano</Text>
+          </Flex>
+
+          <Flex mb="md" align="center" justify="flex-start" gap="xs" wrap="wrap">
+            <Flex align="center" justify="space-between" gap="md" wrap="wrap" w="100%" maw="500px">
+              <Flex align="center" gap="sm">
+                <IconMapPin size={24} color='white'/>
+                <Text fw={500} c="white" span>{t('contact.location.label')}</Text>
+              </Flex>
+              <Button ml="md" variant='transparent' color='green' w={{base: 'auto', xs: '140px'}}
+                component="a"
+                href="https://maps.app.goo.gl/3N19j1wnT7vRUXnp9"
+                target="_blank"
+                rel="noopener"
+              >
+                <Text mr="xs">{t('contact.location.button')}</Text>
+                <IconWorldPin />
+              </Button>
+            </Flex>
+            <Text c="dimmed" style={{ width: '100%', paddingLeft: "2.4rem"}}>{t('contact.location.value')}</Text>
+          </Flex>
+
+        </Flex>
 
       </div>
     </Stack>

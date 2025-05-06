@@ -1,0 +1,78 @@
+{
+    "common": {
+      "english": "English",
+      "spanish": "Español"
+    },
+    "header": {
+      "hello": "Hello",
+      "projects": "Projects",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greetingPrefix": "Hi, I'm",
+      "jobTitle": "Full Stack Developer",
+      "locationTooltip": "Tab🐊, Mexico🌮",
+      "bio": "24 y/o | Web dev + Freelancer + pixel artist.",
+      "resumeButton": "Resume"    
+    },
+    "about": {
+        "title": "About",
+        "career_hl": "With 4+ years of experience building projects, I'm currently freelancing 💼, helping local businesses go digital 📈",
+        "career": "with quality websites and custom tools. My prefferred stack is React + Django/FastAPI + MySQL.", 
+        "degree": "I hold a",
+        "degree_hl": "degree in Computer Systems Engineering 👨‍🎓 from IPN.",
+        "interests": "Outside of coding, I enjoy sci-fi stories 🌌, videogames and making pixel art."
+    },
+    "projects": {
+        "title": "Projects",
+        "intro_text": "My favorite projects, showcasing my technical and creative skills:",
+        "art_reverie": {
+          "title": "Art Reverie",
+          "year": "2024 - 2025",
+          "description": "Web app made to showcase <highlight>public-domain artworks</highlight> and provide information about them, with capabilities for searching individual artworks and exploring collections."
+        },
+        "saed": {
+          "title": "Statistical Data Analysis System",
+          "year": "2023 - 2024",
+          "description": "<highlight1>Developed for educators and researchers at IPN*</highlight1>. Web app designed to provide a straightforward approach to <highlight2>performing statistical analysis based on CSV files, from basic metrics to ML model training.</highlight2><br/> <br/> *Instituto Politécnico Nacional UPIIZ"
+        },
+        "aaroncamaron": {
+          "title": "@aaroncamaron",
+          "year": "2024",
+          "description": "<highlight>Single-page website</highlight> to showcase my work as a pixel artist. Built with pure HTML, CSS, and JavaScript."
+        },
+        "octopuses": {
+          "title": "Amazing Octopuses Battle",
+          "year": "2021",
+          "description": "<highlight1>2-player local video game</highlight1>. Inspired by Duck Game. Features <highlight2>octopuses battling with unique weapons, wall-climbing/clinging mechanics and double jumps for chaotic fun</highlight2>"
+        },
+        "astron": {
+          "title": "Astron",
+          "year": "2020",
+          "description": "2D video game. <highlight>Fight against multiple enemy types, collect power-ups and unlock abilities.</highlight> Difficulty increases with each round. Endless gameplay.<br/> <br/> *Mouse recommended for better experience."
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "intro_text": "If you're looking for someone passionate about building web solutions, let’s talk!",
+        "email": {
+        "label": "Email"
+        },
+        "github": {
+        "label": "GitHub",
+        "button": "Stalk"
+        },
+        "location": {
+        "label": "Location",
+        "button": "Where?",
+        "value": "Tabasco, Mexico"
+        }
+    },
+    "copyEmail": {
+      "tooltip": "Copy email",
+      "response": "Email copied to clipboard!",
+      "button": "Copy"
+    }
+    
+  }

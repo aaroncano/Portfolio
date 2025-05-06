@@ -14,9 +14,9 @@ export function Footer() {
     <Stack align="center" className={classes.wrapper}>
       <Flex className={classes.inner} mb="xl">
         <Button 
-          variant='light' 
+          variant='subtle' 
           mb="md" 
-          color='gray'
+          color='green'
           onClick={scrollToTop}
         >
           <Text mr="xs" size='xl'>🚀</Text>

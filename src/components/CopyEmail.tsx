@@ -2,8 +2,11 @@ import { Tooltip, ActionIcon, Box } from '@mantine/core';
 import { useClipboard } from '@mantine/hooks';
 import {  IconCheck, IconMail } from '@tabler/icons-react';
 
+import { useTranslation } from 'react-i18next';
+
 export function EmailCopyButton() {
   const clipboard = useClipboard({ timeout: 2000 });
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -21,7 +24,7 @@ export function EmailCopyButton() {
       }}
     >
       <Tooltip
-        label={clipboard.copied ? 'Copied to clipboard!' : 'Copy email'}
+        label={clipboard.copied ? t('copyEmail.response') : t('copyEmail.tooltip')}
         color='gray' offset={{ mainAxis: 14, crossAxis: 16 }} events={{ hover: true, focus: true, touch: true }} 
         position="top-end" transitionProps={{ transition: 'pop-bottom-right', duration: 200 }} 
         arrowOffset={26} arrowSize={10} withArrow

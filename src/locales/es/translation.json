@@ -1,0 +1,77 @@
+{
+    "common": {
+      "english": "English",
+      "spanish": "Español"
+    },
+    "header": {
+        "hello": "Inicio",
+        "projects": "Proyectos",
+        "about": "Sobre mí",
+        "contact": "Contacto"
+      },
+    "hero": {
+      "greetingPrefix": "Hola, soy",
+      "jobTitle": "Desarrollador Full Stack",
+      "locationTooltip": "Tabasco🐊, México🌮",
+      "bio": "24 años | Desarrollador web + Freelancer + pixel artista.",
+      "resumeButton": "Currículum"
+    },
+    "about": {
+        "title": "Sobre mí",
+        "career_hl": "Con más de 4 años de experiencia desarrollando proyectos, actualmente trabajo como freelancer 💼, apoyando a empresas locales a digitalizarse",
+        "career": "con sitios web de calidad y herramientas hechas a medida 📈.",
+        "degree": "",
+        "degree_hl": "Ingeniero en Sistemas Computacionales 👨‍🎓, egresado del IPN.",
+        "interests": "Fuera de la programación, disfruto de historias de ciencia ficción 🌌, videojuegos y hacer pixel art."
+    },
+    "projects": {
+        "title": "Proyectos",
+        "intro_text": "Proyectos que me apasionó construir, combinando habilidades técnicas y creativas:",
+        "art_reverie": {
+          "title": "Art Reverie",
+          "year": "2024 - 2025",
+          "description": "Aplicación web creada para mostrar <highlight>obras de arte de dominio público</highlight> y proporcionar información sobre ellas, con capacidades para buscar obras individuales y explorar colecciones."
+        },
+        "saed": {
+          "title": "Sistema de Análisis Estadístico de Datos",
+          "year": "2023 - 2024",
+          "description": "<highlight1>Desarrollado para educadores e investigadores del IPN*</highlight1>. Aplicación web diseñada para proporcionar un enfoque sencillo para <highlight2>realizar análisis estadísticos basados en archivos CSV, desde métricas básicas hasta entrenamiento de modelos de Machine Learning.</highlight2><br/> <br/> *Instituto Politécnico Nacional UPIIZ"
+        },
+        "aaroncamaron": {
+          "title": "@aaroncamaron",
+          "year": "2024",
+          "description": "<highlight>Sitio web de una sola página</highlight> para mostrar mi trabajo como pixel artista. Construido con HTML, CSS y JavaScript puros."
+        },
+        "octopuses": {
+          "title": "Amazing Octopuses Battle",
+          "year": "2021",
+          "description": "<highlight1>Videojuego local para 2 jugadores</highlight1>. Inspirado en Duck Game. <highlight2>Pulpos luchando con armas únicas, mecánicas de escalar/pegarse a las paredes y doble salto para una diversión caótica.</highlight2>"
+        },
+        "astron": {
+          "title": "Astron",
+          "year": "2020",
+          "description": "Videojuego 2D. <highlight>Combate contra múltiples tipos de enemigos, recolecta power-ups y desbloquea habilidades.</highlight> La dificultad aumenta con cada ronda.<br/> <br/> *Usa un mouse para una mejor experiencia."
+        }
+    },
+    "contact": {
+        "title": "Contacto",
+        "intro_text": "Estoy disponible para proyectos y oportunidades. ¡Hablemos!",
+        "email": {
+        "label": "Email"
+        },
+        "github": {
+        "label": "GitHub",
+        "button": "Espiar"
+        },
+        "location": {
+        "label": "Ubicación",
+        "button": "¿Dónde?",
+        "value": "Tabasco, México"
+        }
+    },
+    "copyEmail": {
+        "tooltip": "Copiar Email",
+        "response": "¡Email copiado!",
+        "button": "Copiar"
+    }
+  }

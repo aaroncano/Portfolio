@@ -108,9 +108,3 @@
     flex-direction: column;
   }
 }
-
-.control {
-  height: rem(42px);
-  font-size: var(--mantine-font-size-md);
-
-}

@@ -1,9 +1,11 @@
-import { Title, Text, Stack } from '@mantine/core';
+import { Title, Text, Stack, Divider } from '@mantine/core';
 // eslint-disable-next-line no-duplicate-imports
 import classes from './AboutMe.module.css';
 // import { IconBrandReact, IconBrandGit, IconDatabaseCog, IconBrandHtml5, IconBrandDjango, IconBrandCss3, IconBrandTypescript, IconBrandPython, 
 
 //  } from '@tabler/icons-react';
+
+import { useTranslation } from 'react-i18next';
 
 export function AboutMe() {
   // const skills = [
@@ -17,31 +19,40 @@ export function AboutMe() {
   //   { icon: <IconBrandGit size={24} />, label: 'Git' },
 
   // ];
+  const { t } = useTranslation();
 
   return (
     <Stack align="center" className={classes.wrapper} mt="md">
       <Stack className={classes.inner}>
           <Title className={classes.title}>
-          About
+          {t('about.title')}
           </Title>
 
           <div className={classes.content}>
 
-            <Text className={classes.description} c="dimmed">
+              <Text className={classes.description} c="dimmed" span>{t('about.degree')}</Text>
               
-            <Text size="md" fw={600} span c="#cdcdcd">4+ years </Text> 
-            of experience building projects (starting in game dev, now specializing in web apps).  
-            I hold a <Text size="md" fw={600} span c="#cdcdcd">degree in Computer Systems Engineering 👨‍🎓 from Instituto Politécnico Nacional, UPIIZ</Text>.
-            <br/><br/>
-            My preferred stack is <Text size="md" fw={600} span c="#cdcdcd">React + Django and MySQL/SQLite</Text>.
-            I like cool algorithms, video games, sci-fi stories and making pixel art.  
-            </Text>
+              <Text size="md" fw={600} span c="#cdcdcd"> {t('about.degree_hl')}</Text>
+
+              <Divider my="md" size="md"/> 
+              
+
+              <Text size="md" fw={600} span c="#cdcdcd">{t('about.career_hl')} </Text>
+              <Text className={classes.description} c="dimmed" span>{t('about.career')}</Text>
+              
+
+              <Divider my="md" size="md"/> 
+              
+              <Text className={classes.description} c="dimmed" >{t('about.interests')}</Text>
+              
+            
 
           </div>
 
           {/* <div className={classes.skillsSection}>
               <Title order={2} className={classes.title}>
                 Skill set
+                <Text size="md" fw={600} span c="#cdcdcd"></Text>
               </Title>
               
               <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="sm" className={classes.skillsGrid}>

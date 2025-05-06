@@ -2,8 +2,10 @@ import { Carousel } from '@mantine/carousel';
 import '@mantine/carousel/styles.css';
 import { Badge, Button, Card, Flex, Group, Image, Overlay, SimpleGrid, Text, Title } from '@mantine/core';
 import classes from './CarouselCard.module.css';
-import React from 'react';
+import React, { useRef } from 'react';
 import { IconArrowLeft, IconArrowRight, IconBrandGithub, IconExternalLink, IconExternalLinkOff } from '@tabler/icons-react';
+import Autoplay from 'embla-carousel-autoplay';
+
 
 interface skillItem {
   icon: React.ReactNode;
@@ -22,13 +24,13 @@ interface CarouselCardProps {
 }
 
 export function CarouselCard({ urlImages, title, year, description, skills, githubURL, visitURL, available }: CarouselCardProps) {
-
+  const autoplay = useRef(Autoplay({ delay: 2000, stopOnInteraction: false }));
 
 
   const slides = urlImages.map((image, index) => (
     <Carousel.Slide key={index} className={classes.slide}>
       <Overlay backgroundOpacity={0.1}/>
-      <Image src={image} fit='cover' h="100%"/>
+      <Image src={image} fit='cover' h="100%" loading="lazy"/>
     </Carousel.Slide>
   ));
 
@@ -38,6 +40,13 @@ export function CarouselCard({ urlImages, title, year, description, skills, gith
         <Carousel
           withIndicators
           loop
+
+          plugins={[autoplay.current]}
+          onMouseEnter={autoplay.current.stop}
+          onMouseLeave={autoplay.current.reset}
+          onTouchStart={autoplay.current.stop}
+          onTouchEnd={autoplay.current.reset}
+          
           classNames={{
             root: classes.carousel,
             controls: classes.carouselControls,

@@ -3,16 +3,21 @@ import { Burger, Container, Group, Paper, Transition } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderSimple.module.css';
 
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
+
 const links = [
-  { link: '#hello', label: 'Hello' },
-  { link: '#about', label: 'About' },
-  { link: '#projects', label: 'Projects' },
-  { link: '#contact', label: 'Contact' },
+  { link: '#hello', labelKey: 'header.hello' },
+  { link: '#projects', labelKey: 'header.projects' },
+  { link: '#about', labelKey: 'header.about' },
+  { link: '#contact', labelKey: 'header.contact' },
 ];
 
 export function HeaderSimple() {
   const [opened, { toggle }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
+
+  const { t } = useTranslation('translation');
 
   const scrollToSection = (hash: string) => {
     const element = document.querySelector(hash);
@@ -24,7 +29,7 @@ export function HeaderSimple() {
 
   const items = links.map((link) => (
     <a
-      key={link.label}
+      key={link.link}
       href={link.link}
       className={classes.link}
       data-active={active === link.link || undefined}
@@ -34,16 +39,20 @@ export function HeaderSimple() {
         scrollToSection(link.link);
       }}
     >
-      {link.label}
+      {t(link.labelKey)}
     </a>
   ));
 
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <Group gap={5} visibleFrom="xs">
-          {items}
-        </Group>
+          <Group justify='space-between' w="100%">
+            <Group gap={5} visibleFrom="xs">
+              {items}
+            </Group>
+            <LanguageSwitcher />
+          </Group>
+          
         
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
         
