@@ -63,6 +63,10 @@
         "label": "GitHub",
         "button": "Espiar"
         },
+        "linkedin": {
+        "label": "LinkedIn",
+        "button": "Conectar"
+        },
         "location": {
         "label": "Ubicación",
         "button": "¿Dónde?",

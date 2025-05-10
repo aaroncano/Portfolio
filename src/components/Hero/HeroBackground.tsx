@@ -3,7 +3,7 @@ import { Button, Text, Title, Image, Flex, Stack, Tooltip, Menu } from '@mantine
 import { useTranslation } from 'react-i18next';
 
 import classes from './HeroBackground.module.css';
-import { IconBrandGithub, IconCaretDown, IconFileDownload } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandLinkedin, IconCaretDown, IconFileDownload } from '@tabler/icons-react';
 import { EmailCopyButton } from '../CopyEmail';
 import yo from '../../img/perfil.jpg';
 import resumeEN from '../../Files/Aaron_Cano_Resume_EN.pdf';
@@ -99,6 +99,14 @@ export function HeroBackground() {
                     rel="noopener"
               >
                   <IconBrandGithub size={24} color='gray'/>
+              </Button>
+              <Button size='sm' color="light" variant="transparent" p="0" m="0" miw="sm"
+                    component="a"
+                    href="https://www.linkedin.com/in/aaroncanoc/"
+                    target="_blank"
+                    rel="noopener"
+              >
+                  <IconBrandLinkedin size={24} color='gray'/>
               </Button>
             </Flex>
           </Flex>

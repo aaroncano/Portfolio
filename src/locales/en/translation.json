@@ -63,6 +63,10 @@
         "label": "GitHub",
         "button": "Stalk"
         },
+        "linkedin": {
+        "label": "LinkedIn",
+        "button": "Connect"
+        },
         "location": {
         "label": "Location",
         "button": "Where?",

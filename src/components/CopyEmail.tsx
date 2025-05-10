@@ -32,11 +32,9 @@ export function EmailCopyButton() {
         <ActionIcon
           onClick={() => clipboard.copy('me@aaroncano.com')}
           variant="transparent"
-          size="md"
           color='gray'
-          m="0"
-          p="0"
-
+          py="auto"
+          my="auto"
         >
           {clipboard.copied ? (
             <IconCheck size={24} color='gray'/>
