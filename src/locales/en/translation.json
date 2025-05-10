@@ -11,15 +11,15 @@
     },
     "hero": {
       "greetingPrefix": "Hi, I'm",
-      "jobTitle": "Full Stack Developer",
+      "jobTitle": "Software developer",
       "locationTooltip": "From Tabasco, Mexico",
       "bio": "24 y/o | Web dev + Freelancer + pixel artist.",
       "resumeButton": "Resume"    
     },
     "about": {
         "title": "About",
-        "career_hl": "With 4+ years of experience building projects, I'm currently freelancing 💼, helping local businesses go digital 📈",
-        "career": "with quality websites and custom tools. My prefferred stack is React + Django/FastAPI + MySQL.", 
+        "career_hl": "4+ years of experience building projects. I currently work as a freelancer 💼.",
+        "career": "My prefferred stack is React + Django/FastAPI + MySQL.", 
         "degree": "I hold a",
         "degree_hl": "degree in Computer Systems Engineering 👨‍🎓 from IPN.",
         "interests": "Outside of coding, I enjoy sci-fi stories 🌌, videogames and making pixel art."

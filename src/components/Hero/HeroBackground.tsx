@@ -36,7 +36,7 @@ export function HeroBackground() {
             label={t('hero.locationTooltip')}
             color='gray' offset={{ mainAxis: 14, crossAxis: 16 }} events={{ hover: true, focus: true, touch: true }} position="top-end" transitionProps={{ transition: 'pop-bottom-right', duration: 200 }}
           >
-            <Button size='xs' color="gray" variant="light">
+            <Button size='xs' color="gray" variant="light" mb="xs" mt="xs">
               <Text fz='1.4rem'>🐊</Text>
             </Button>
           </Tooltip>

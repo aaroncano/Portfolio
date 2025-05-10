@@ -11,15 +11,15 @@
       },
     "hero": {
       "greetingPrefix": "Hola, soy",
-      "jobTitle": "Desarrollador Full Stack",
+      "jobTitle": "Desarrollador de software",
       "locationTooltip": "De Tabasco, México",
       "bio": "24 años | Desarrollador web + Freelancer + pixel artista.",
       "resumeButton": "Currículum"
     },
     "about": {
         "title": "Sobre mí",
-        "career_hl": "Con más de 4 años de experiencia desarrollando proyectos, actualmente trabajo como freelancer 💼, apoyando a empresas locales a digitalizarse",
-        "career": "con sitios web de calidad y herramientas hechas a medida 📈.",
+        "career_hl": "Más de 4 años de experiencia desarrollando proyectos. Actualmente trabajo como freelancer 💼.",
+        "career": "Mi stack preferido es React + Django/FastAPI + MySQL",
         "degree": "",
         "degree_hl": "Ingeniero en Sistemas Computacionales 👨‍🎓, egresado del IPN.",
         "interests": "Fuera de la programación, disfruto de historias de ciencia ficción 🌌, videojuegos y hacer pixel art."
@@ -55,7 +55,7 @@
     },
     "contact": {
         "title": "Contacto",
-        "intro_text": "Estoy disponible para proyectos y oportunidades laborales. ¡Hablemos!",
+        "intro_text": "Estoy disponible para nuevos proyectos y oportunidades laborales. ¡Hablemos!",
         "email": {
         "label": "Email"
         },
