@@ -12,7 +12,7 @@
     "hero": {
       "greetingPrefix": "Hi, I'm",
       "jobTitle": "Full Stack Developer",
-      "locationTooltip": "Tab🐊, Mexico🌮",
+      "locationTooltip": "From Tabasco, Mexico",
       "bio": "24 y/o | Web dev + Freelancer + pixel artist.",
       "resumeButton": "Resume"    
     },
@@ -26,7 +26,7 @@
     },
     "projects": {
         "title": "Projects",
-        "intro_text": "My favorite projects, showcasing my technical and creative skills:",
+        "intro_text": "My favorite projects:",
         "art_reverie": {
           "title": "Art Reverie",
           "year": "2024 - 2025",
@@ -66,7 +66,7 @@
         "location": {
         "label": "Location",
         "button": "Where?",
-        "value": "Tabasco, Mexico"
+        "value": "Zacatecas, Mexico"
         }
     },
     "copyEmail": {

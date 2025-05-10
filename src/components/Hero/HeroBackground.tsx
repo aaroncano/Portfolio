@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import classes from './HeroBackground.module.css';
 import { IconBrandGithub, IconCaretDown, IconFileDownload } from '@tabler/icons-react';
 import { EmailCopyButton } from '../CopyEmail';
-import yo from '../../img/yo_provisional_1.jpg';
+import yo from '../../img/perfil.jpg';
 import resumeEN from '../../Files/Aaron_Cano_Resume_EN.pdf';
 import resumeES from '../../Files/Aaron_Cano_Resume_ES.pdf';
 
@@ -37,7 +37,7 @@ export function HeroBackground() {
             color='gray' offset={{ mainAxis: 14, crossAxis: 16 }} events={{ hover: true, focus: true, touch: true }} position="top-end" transitionProps={{ transition: 'pop-bottom-right', duration: 200 }}
           >
             <Button size='xs' color="gray" variant="light">
-              <Text fz='1.4rem'>🇲🇽</Text>
+              <Text fz='1.4rem'>🐊</Text>
             </Button>
           </Tooltip>
 

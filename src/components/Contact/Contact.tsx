@@ -61,7 +61,7 @@ export function Contact() {
               </Flex>
               <Button ml="md" variant='transparent' color='green' w={{base: 'auto', xs: '140px'}}
                 component="a"
-                href="https://maps.app.goo.gl/3N19j1wnT7vRUXnp9"
+                href="https://maps.app.goo.gl/fLXRzRqHQGt4DLkj7"
                 target="_blank"
                 rel="noopener"
               >
